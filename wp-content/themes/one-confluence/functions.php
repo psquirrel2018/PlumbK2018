@@ -10,7 +10,6 @@ require_once( dirname(__FILE__) . '/lib/gallery-functions.php');
 //require_once( dirname(__FILE__) . '/lib/aq_resizer.php');  //May want to use this so that in the case that someone uploads an image that is too large that it resizes for optimization...
 require_once( dirname(__FILE__) . '/lib/wp_bootstrap_navwalker.php');
 
-
 /**
  * Including all required style files in the theme
  */
@@ -21,7 +20,6 @@ function oneConfluence_styles() {
     wp_register_style('animate',  get_template_directory_uri() .'/css/animate.css', array(), null, 'all' );
     wp_register_style('font-awesome.min', get_template_directory_uri() .'/css/font-awesome.min.css', array(), null, 'all' );
     wp_register_style('owl-carousel', get_template_directory_uri() .'/css/owl.carousel.css', array(), null, 'all' );
-    //wp_register_style('scrollspy', get_template_directory_uri() .'/css/scrollspy.css', array(), null, 'all' );
     wp_register_style('styles', get_stylesheet_uri(), array(), '2.7.0','all' );
     wp_enqueue_style( 'bootstrap' );
     wp_enqueue_style( 'drawer-css' );
@@ -29,7 +27,6 @@ function oneConfluence_styles() {
     wp_enqueue_style( 'animate' );
     wp_enqueue_style( 'fotorama' );
     wp_enqueue_style( 'font-awesome.min' );
-    //wp_enqueue_style( 'scrollspy' );
     wp_enqueue_style( 'styles' );
 
     /**
@@ -49,19 +46,16 @@ function oneConfluence_scripts() {
     //wp_enqueue_script('animation', get_template_directory_uri() . '/js/animation.js', array('jquery'), '', true);
     wp_enqueue_script('modernizr', get_template_directory_uri() . '/js/modernizr.custom.79639.js', array('jquery'));
     wp_enqueue_script('scrollReveal', get_template_directory_uri() . '/js/scrollReveal.js', array('jquery'), '', true);
-    //wp_enqueue_script('superfish', get_template_directory_uri() . '/js/superfish.js', array('jquery'));
     wp_enqueue_script('ba-cond', get_template_directory_uri() . '/js/jquery.ba-cond.min.js', array('jquery'), '', true);
     wp_enqueue_script('imagesloaded', get_template_directory_uri() . '/js/imagesloaded.pkgd.min.js', array(), '1.0.0', true );
     wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '1.0.0', true );
     wp_enqueue_script('drawerjs', get_template_directory_uri() . '/js/drawer.js', array('jquery'), '1.0.0', true );
     wp_enqueue_script('owl-carousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array(), '1.0.0', true );
-    //wp_enqueue_script('meanmenu', get_template_directory_uri() . '/js/jquery.meanmenu.js', array('jquery'), '', true);
     //wp_enqueue_script('smoothscroll', get_template_directory_uri() . '/js/smoothscroll.min.js', array('jquery'), '', true);
     wp_enqueue_script('nav', get_template_directory_uri() . '/js/jquery.nav.js', array('jquery'), '', true);
     wp_enqueue_script('waypoints', get_template_directory_uri() . '/js/jquery.waypoints.min.js', array('jquery'), '', true);
     wp_enqueue_script('sticky', get_template_directory_uri() . '/js/sticky.js', array('jquery', 'waypoints'), '', true);
     //wp_enqueue_script( 'parallax-script', get_template_directory_uri() . '/js/parallax.js');
-    //wp_enqueue_script( 'scrollspy', get_template_directory_uri() . '/js/scrollspy-progress.min.js');
     wp_enqueue_script( 'grayscale', get_template_directory_uri() . '/js/jquery.gray.min.js');
     wp_enqueue_script('settings', get_template_directory_uri() . '/js/custom.js', array('jquery'), '', true);
 
@@ -147,12 +141,10 @@ function one_mobile_nav() {
 if (!isset($content_width))
     $content_width = 590; //This too was messed up and not being used in this version.  go back to version 2 or 3 to see this.
 
-
 /**
  * Pagination - This is not used in this version
  *
  */
-
 
 //Creating Custom Post types for Team
 function setup_team_cpt(){
