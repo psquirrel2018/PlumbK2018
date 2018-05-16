@@ -1,30 +1,4 @@
-# -----------------------------------------------------------------
-# .gitignore for WordPress
-# Bare Minimum Git
-# http://ironco.de/bare-minimum-git/
-# ver 20150227
-#
-# This file is tailored for a WordPress project 
-# using the default directory structure
-#
-# NOTES:
-# The purpose of gitignore files is to ensure that certain files not
-# tracked by Git remain untracked.
-#
-# To ignore uncommitted changes in a file that is already tracked,
-# use `git update-index --assume-unchanged`.
-#
-# To stop tracking a file that is currently tracked,
-# use `git rm --cached`
-#
-# -----------------------------------------------------------------
-
-# ignore everything in the root except the "wp-content" directory.
 /*
-!wp-content/
-
-# ignore all files starting with .
-.*
 
 # track this file .gitignore (i.e. do NOT ignore it)
 !.gitignore
@@ -32,14 +6,6 @@
 # track readme.md in the root (i.e. do NOT ignore it)
 !readme.md
 
-# ignore everything in the "wp-content" directory, except:
-wp-content/*
+!wp-content/plugins/site-instructions
 
-!wp-content/plugins/
-wp-content/plugins/cmb2
-wp-content/plugins/responsive-menu
-
-!wp-content/themes/
-
-# ignore specific themes
-wp-content/themes/twenty*/
+!wp-content/themes/one-confluence
