@@ -709,7 +709,7 @@ jQuery(function(){
     })
     //add tween
         //document.getElementById("myDiv").style.borderColor = "red";
-        .setTween(".border-left1", 0.5, {borderColor:'#cccccc'}) // trigger a TweenMax.to tween
+        .setTween(".border-left1", 0.5, {borderColor:'#000000'}) // trigger a TweenMax.to tween
         //.addIndicators({name: "10 (duration: 0)"}) // add indicators (requires plugin)
         .addTo(controller);
 
@@ -717,7 +717,7 @@ jQuery(function(){
         triggerElement:'#border2'
     })
     //add tween
-        .setTween(".border-left2", 0.5, {borderColor:'#e2e2e2'}) // trigger a TweenMax.to tween
+        .setTween(".border-left2", 0.5, {borderColor:'#000000'}) // trigger a TweenMax.to tween
         //.addIndicators({name: "10 (duration: 0)"}) // add indicators (requires plugin)
         .addTo(controller);
 
@@ -725,7 +725,7 @@ jQuery(function(){
         triggerElement:'#border3'
     })
     //add tween
-        .setTween(".border-left3", 0.5, {borderColor:'#cccccc'}) // trigger a TweenMax.to tween
+        .setTween(".border-left3", 0.5, {borderColor:'#000000'}) // trigger a TweenMax.to tween
         //.addIndicators({name: "10 (duration: 0)"}) // add indicators (requires plugin)
         .addTo(controller);
 
