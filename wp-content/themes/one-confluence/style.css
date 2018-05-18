@@ -596,7 +596,7 @@ img.desaturate4 {filter: grayscale(100%);}
 .tween-pb {opacity:0.0;}
 .tween-et {opacity:0.0;}
 
-.border-left {border-left:4px solid #e2e2e2;}
+.border-left {border-left:4px solid #000000;}
 .border-left1 {border-color: #ffffff; margin-top:-5px;}
 .border-left2 {border-color: #ffffff;}
 .border-left3 {border-color: #ffffff;}
@@ -617,8 +617,10 @@ img.desaturate4 {filter: grayscale(100%);}
     width:30%;float:left;margin-top:-30px;margin-left:-100px;background: transparent;
 }
 
-.sketch-container {height:390px;background: url('http://confluence-sandbox.xyz/3plus1/wp-content/uploads/2018/04/sketch2-full-sketch.png');background-size:contain;
+.sketch-container {height:390px;background: url('assets/PKS-Sketch-Composition.jpg');background-size:contain;
     background-repeat:no-repeat;background-position-x: 0;background-position-y: 0; }
+
+/* assets/wp-content/uploads/2018/04/sketch2-full-sketch.png = old sketch */
 
 
 .tween1,.tween2,.tween3,.tween4,.tween5,.tween6,.tween7,.tween8,.tween9,.tween10 {font-size:32px;}
