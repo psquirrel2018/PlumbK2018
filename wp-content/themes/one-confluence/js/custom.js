@@ -62,7 +62,7 @@
         loop: true,
         dots: false,
         nav: true,
-        navText: ['<i class="fa fa-caret-left fa-2x"></i> ','<i class="fa fa-caret-right fa-2x"></i>']
+        navText: ['<i class="fa fa-caret-left fa-2x"></i><span class="next-prev hidden-sm hidden-xs">Previous</span> ','<span class="next-prev hidden-sm hidden-xs">Next</span><i class="fa fa-caret-right fa-2x"></i>']
     });
 
     $("#gallery .owl-carousel").owlCarousel({
