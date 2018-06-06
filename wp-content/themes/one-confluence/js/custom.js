@@ -137,7 +137,6 @@
         $('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
     }*/
 
-
     //  Start Waypoint.js triggers.
 
     var makeHeaderBlockFixedDown = new Waypoint({
@@ -704,7 +703,7 @@ jQuery(function(){
      .addTo(controller);*/
     //methods always start with a lower class letter
 
-    var borderAnimation1 = new ScrollMagic.Scene({
+    /*var borderAnimation1 = new ScrollMagic.Scene({
         triggerElement:'#border1'
     })
     //add tween
@@ -736,6 +735,7 @@ jQuery(function(){
         .setTween(".pb-container", 1.0, {opacity:'1.0'}) // trigger a TweenMax.to tween
        //.addIndicators({name: "pb bottom (duration: 0)"}) // add indicators (requires plugin)
         .addTo(controller);
+        */
 
 });
 
