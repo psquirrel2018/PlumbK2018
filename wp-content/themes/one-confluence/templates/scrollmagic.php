@@ -13,7 +13,7 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<div id="trigger-header" class="spacer s0"></div>
-				<div class="wian-header" style="height:270px;background: url('http://confluence-sandbox.xyz/3plus1/wp-content/uploads/2018/04/HandSketch2.0-transparent6.png'); background-size:contain;background-position: 50% 50%;background-repeat: no-repeat;">
+				<div class="wian-header sketch-bg">
 				</div>
 			</div>
 		</div>
@@ -78,7 +78,7 @@
 		</div>
 		<div id="sketch" class="row">
 			<div class="col-md-1"></div>
-			<div class="col-md-11 col-md-pull-1 pb-bg2 sketch-container">
+			<div class="col-md-12 pb-bg2 sketch-container">
 				<div class="pb-container">
 					<img class="pb-bottom" src="http://confluence-sandbox.xyz/3plus1/wp-content/uploads/2018/04/plumb-bob-1.png">
 				</div>
@@ -91,7 +91,7 @@
 
 				<div id="signature" class="wian-signature">
 					<div id="contact" class="contact-us-button">
-						<a href="#" class="" style="float:left;"><img src="http://confluence-sandbox.xyz/3plus1/wp-content/uploads/2018/04/contactus-button.png"></a>
+						<a href="#" class="" style="float:left;"><img style="width:100%;" src="http://confluence-sandbox.xyz/3plus1/wp-content/uploads/2018/06/ContactUsBox-v3.png"></a>
 					</div>
 					<div id="sig" style="width:50%;float:right;margin-top:-30px;">
 						<img src="http://confluence-sandbox.xyz/3plus1/wp-content/uploads/2018/04/signature-sans-logo.png" style="width:100%;" class="img-responsive tween10">
