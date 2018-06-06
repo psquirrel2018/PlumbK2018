@@ -596,10 +596,13 @@ img.desaturate4 {filter: grayscale(100%);}
 .tween-pb {opacity:0.0;}
 .tween-et {opacity:0.0;}
 
-.border-left {border-left:4px solid #000000;}
-.border-left1 {border-color: #ffffff; margin-top:-5px;}
-.border-left2 {border-color: #ffffff;}
-.border-left3 {border-color: #ffffff;}
+.border-left {margin-left:1px;margin-top:-4px;}
+.border-left1 {background: url('assets/string-sketch-sm.png');background-size:12px;
+    background-repeat:no-repeat;background-position-x: 0;background-position-y: 0;}
+.border-left2 {background: url('assets/string-sketch-sm.png');background-size:12px;
+    background-repeat:no-repeat;background-position-x: 0;background-position-y: 0;margin-left: 5px;}
+.border-left3 {background: url('assets/string-sketch-sm.png');background-size:12px;
+    background-repeat:no-repeat;background-position-x: 0;background-position-y: 0;margin-left:10px;}
 /*.pb-bg {height:150px;background: url('http://pks.local/wp-content/uploads/2018/04/plumb-bob.jpeg');background-size:contain;
     background-repeat:no-repeat;background-position-x: 25px;background-position-y: -4px; }*/
 .pb-bottom {width:300px;
@@ -608,20 +611,26 @@ img.desaturate4 {filter: grayscale(100%);}
 .pb-container {
     width: 300px;
     position: relative;
-    left: -75px;
-    top: -82px;
-    opacity:0.0;
+    left: -74px;
+    top: -22px;
+    opacity:1.0;
     float:left;
 }
 .contact-us-button{
-    width:30%;float:left;margin-top:-30px;margin-left:-100px;background: transparent;
+    width:30%;float:left;margin-top:-30px;margin-left:-48px;background: transparent;
 }
 
 .sketch-container {height:390px;background: url('assets/PKS-Sketch-Composition.jpg');background-size:contain;
-    background-repeat:no-repeat;background-position-x: 0;background-position-y: 0; }
+    background-repeat:no-repeat;background-position-x: 0;background-position-y: 0; margin-left:10px; }
+.sketch-bg {
+    height:274px;
+    background: url('assets/HandSketch-v3.png');
+    background-size:contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
 
 /* assets/wp-content/uploads/2018/04/sketch2-full-sketch.png = old sketch */
-
 
 .tween1,.tween2,.tween3,.tween4,.tween5,.tween6,.tween7,.tween8,.tween9,.tween10 {font-size:32px;}
 #pbTrigger, #etTrigger {font-size:32px;}
