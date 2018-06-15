@@ -585,7 +585,7 @@ img.blur {filter: blur(1px);}
 img.desaturate2 {filter: grayscale(100%);}
 img.desaturate3 {filter: grayscale(100%);}
 img.desaturate4 {filter: grayscale(100%);}
-#scrollfucking{
+#scroll-container{
     height:100%;
 }
 #myContainer {padding:0 60px 0 120px;color:#f1f1f1;font-size: 32px !important; line-height: 46px;}

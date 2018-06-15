@@ -7,7 +7,7 @@
  */
 ?>
 
-<div id="scrollfucking">
+<div id="scroll-container">
 
     <div id="myContainer">
         <section id="one">
