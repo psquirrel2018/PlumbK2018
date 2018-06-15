@@ -261,18 +261,19 @@ if (function_exists('one_get_option')) {
         </section>
 
         <section id="name" class="row footer_wrapper" data-title="name">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <?php
+                        $scrollmagic = 'yes';
 
-            <div class="row">
-                <div class="col-xs-12" style="">
-                    <?php
-                    $scrollmagic = 'yes';
+                        if ($scrollmagic === 'yes') { get_template_part('templates/scrollmagic'); }
+                        else { ?>
 
-                    if ($scrollmagic === 'yes') { get_template_part('templates/scrollmagic'); }
-                    else { ?>
+                            <h2>scrollmagic doesn't equal yes</h2>
 
-                        <h2>scrollmagic doesn't equal yes</h2>
-
-                    <?php } ?>
+                        <?php } ?>
+                    </div>
                 </div>
             </div>
         </section>
