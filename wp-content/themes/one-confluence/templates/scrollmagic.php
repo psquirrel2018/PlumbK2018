@@ -21,7 +21,7 @@
 			<div class="col-md-1"></div>
 			<div class="col-md-10 border-left border-left1">
 				<div id="border1" class="spacer s0"></div>
-				<div class="paragraph1" style="padding:25px 60px;">
+				<div class="paragraph1 scroll-content">
 					<div id="trigger1" class="spacer s0"></div>
 					<span class="tween1">Over the years we’ve received many inquiries as to where the business name, Plumb Kendall Solutions, came from.</span>
 					<div id="fadeOut1" class="spacer s0" style="display:inline-block;"></div>
@@ -41,7 +41,7 @@
 			</div>
 			<div class="col-md-10 border-left border-left2">
 				<div id="border2" class="spacer s0"></div>
-				<div class="paragraph2" style="padding:25px 60px;"">
+				<div class="paragraph2 scroll-content">
 					<div id="trigger4" class="spacer s0"></div>
 					<span class="tween4">The genesis for the company’s name and logo is rather simple. We love <span id="pbTrigger" class="" style="inline;">plumb bobs</span> and what they represent.</span>
 					<div id="fadeOut4" class="spacer s0" style="display:inline-block;"></div>
@@ -59,7 +59,7 @@
 			<div class="col-md-1"></div>
 			<div class="col-md-10 border-left border-left3">
 				<div id="border3" class="spacer s0"></div>
-				<div class="paragraph3" style="padding:25px 60px;"">
+				<div class="paragraph3 scroll-content">
 					<div id="trigger7" class="spacer s0"></div>
 					<span class="tween7">In capable hands it can build the ancient pyramids, the <span id="etTrigger" class="" style="inline;">Eiffel Tower</span> and with the assistance of the stars, navigate great seas.</span>
 					<div id="fadeOut7" class="spacer s0" style="display:inline-block;"></div>
@@ -91,7 +91,7 @@
 
 				<div id="signature" class="wian-signature">
 					<div id="contact" class="contact-us-button">
-						<a href="#" class="" style="float:left;"><img style="width:100%;" src="http://confluence-sandbox.xyz/3plus1/wp-content/uploads/2018/06/ContactUsBox-v3.png"></a>
+						<a href="#" class="" style="float:left;" data-toggle="modal" data-target="#contactModal"><img style="width:100%;" src="http://confluence-sandbox.xyz/3plus1/wp-content/uploads/2018/06/ContactUsBox-v3.png"></a>
 					</div>
 					<div id="sig" style="width:50%;float:right;margin-top:-30px;">
 						<img src="http://confluence-sandbox.xyz/3plus1/wp-content/uploads/2018/04/signature-sans-logo.png" style="width:100%;" class="img-responsive tween10">

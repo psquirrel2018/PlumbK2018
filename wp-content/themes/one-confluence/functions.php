@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Including all required lib files in the theme
  */
@@ -7,34 +6,29 @@ require_once( dirname(__FILE__) . '/lib/one-site-options.php');
 require_once( dirname(__FILE__) . '/lib/one-frontpage-options.php');
 require_once( dirname(__FILE__) . '/lib/team-functions.php');
 require_once( dirname(__FILE__) . '/lib/gallery-functions.php');
-//require_once( dirname(__FILE__) . '/lib/aq_resizer.php');  //May want to use this so that in the case that someone uploads an image that is too large that it resizes for optimization...
 require_once( dirname(__FILE__) . '/lib/wp_bootstrap_navwalker.php');
 
 /**
  * Including all required style files in the theme
  */
 function oneConfluence_styles() {
-    wp_register_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '1', 'all' );
-    wp_register_style('drawer-css', get_template_directory_uri() . '/css/bootstrap-drawer.css', array(), null, 'all' );
+    wp_register_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.css', array(), '1', 'all' );
     wp_register_style('fotorama', get_template_directory_uri() .'/css/fotorama.css', array(), '1', 'all' );
-    wp_register_style('animate',  get_template_directory_uri() .'/css/animate.css', array(), null, 'all' );
     wp_register_style('font-awesome.min', get_template_directory_uri() .'/css/font-awesome.min.css', array(), null, 'all' );
     wp_register_style('owl-carousel', get_template_directory_uri() .'/css/owl.carousel.css', array(), null, 'all' );
+    wp_register_style('mfp-css', get_template_directory_uri() .'/css/magnific-popup.css', array(), null, 'all' );
     wp_register_style('styles', get_stylesheet_uri(), array(), '2.7.0','all' );
     wp_enqueue_style( 'bootstrap' );
-    wp_enqueue_style( 'drawer-css' );
     wp_enqueue_style( 'owl-carousel' );
-    wp_enqueue_style( 'animate' );
     wp_enqueue_style( 'fotorama' );
     wp_enqueue_style( 'font-awesome.min' );
+    wp_enqueue_style( 'mfp-css' );
     wp_enqueue_style( 'styles' );
-
     /**
      * Google fonts-opensans
      */
     wp_enqueue_style('one-opensans', '//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300,400italic');
     wp_enqueue_style('one-anton', '//fonts.googleapis.com/css?family=Anton:400,600,700,800');
-
 }
 
 add_action('wp_enqueue_scripts', 'oneConfluence_styles');
@@ -43,34 +37,29 @@ add_action('wp_enqueue_scripts', 'oneConfluence_styles');
  * Include all required javascript files in the theme
  */
 function oneConfluence_scripts() {
-    //wp_enqueue_script('animation', get_template_directory_uri() . '/js/animation.js', array('jquery'), '', true);
     wp_enqueue_script('modernizr', get_template_directory_uri() . '/js/modernizr.custom.79639.js', array('jquery'));
     wp_enqueue_script('scrollReveal', get_template_directory_uri() . '/js/scrollReveal.js', array('jquery'), '', true);
     wp_enqueue_script('ba-cond', get_template_directory_uri() . '/js/jquery.ba-cond.min.js', array('jquery'), '', true);
     wp_enqueue_script('imagesloaded', get_template_directory_uri() . '/js/imagesloaded.pkgd.min.js', array(), '1.0.0', true );
-    wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '1.0.0', true );
-    wp_enqueue_script('drawerjs', get_template_directory_uri() . '/js/drawer.js', array('jquery'), '1.0.0', true );
+    wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.js', array('jquery'), '1.0.0', true );
     wp_enqueue_script('owl-carousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array(), '1.0.0', true );
-    //wp_enqueue_script('smoothscroll', get_template_directory_uri() . '/js/smoothscroll.min.js', array('jquery'), '', true);
     wp_enqueue_script('nav', get_template_directory_uri() . '/js/jquery.nav.js', array('jquery'), '', true);
     wp_enqueue_script('waypoints', get_template_directory_uri() . '/js/jquery.waypoints.min.js', array('jquery'), '', true);
     wp_enqueue_script('sticky', get_template_directory_uri() . '/js/sticky.js', array('jquery', 'waypoints'), '', true);
-    //wp_enqueue_script( 'parallax-script', get_template_directory_uri() . '/js/parallax.js');
     wp_enqueue_script( 'grayscale', get_template_directory_uri() . '/js/jquery.gray.min.js');
+    wp_enqueue_script('mfp', get_template_directory_uri() . '/js/jquery.magnific-popup.js', array('jquery'), '1.0.0', true );
     wp_enqueue_script('settings', get_template_directory_uri() . '/js/custom.js', array('jquery'), '', true);
 
      /**
      * Easing javascript file
      */
     wp_enqueue_script('oneConfluence-easing', 'http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js', array('jquery'), '', true);
-
     /** scrollmagic.js */
 
     wp_enqueue_script('greensock', '//cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js', array('jquery'), '', true);
     wp_enqueue_script('scrollmagic-min', '//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js', array('jquery'), '', true);
     wp_enqueue_script('animation', '//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js', array('jquery'), '', true);
     //wp_enqueue_script('scrollmagic-debug', '//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js', array('jquery'), '', true);
-
 }
 
 add_action('wp_enqueue_scripts', 'oneConfluence_scripts');
@@ -126,8 +115,9 @@ function one_mobile_nav() {
             'theme_location' => 'frontpage-mobile-menu',
             'menu_class' => 'nav navbar-nav',
             'menu_id' => 'one_menu_mobile',
-            'container' => '',
+            'container' => 'false',
             'container_class' => '',
+            'depth' => 2,
             //'fallback_cb' => 'one_front_nav_fallback',  Removed fallback because we changed directions so many times and this is so specific that I don't see there ever being a fallback
             'walker' => new wp_bootstrap_navwalker()));
 }

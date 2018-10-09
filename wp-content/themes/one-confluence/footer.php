@@ -1,7 +1,17 @@
 <!-- Footer -->
 <?php
 global $whatsInaName;
+
+if (function_exists('one_get_option')) {
+    //Footer Info
+    $footerPhone = one_get_option('phone_text');
+    $footerEmail = one_get_option('foot_email');
+    $footer_logo = one_get_option('logo2');
+    $address_line1 = one_get_option('address_line1');
+    $address_line2 = one_get_option('address_line2');
+}
 ?>
+
 <div id="textModal" class="modal">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -33,10 +43,15 @@ global $whatsInaName;
                 <h4 class="modal-title" id="myContactModalLabel">Contact Us</h4>
             </div>
             <div class="modal-body">
-                <?php echo do_shortcode( '[contact-form-7 id="34" title="contact form 1"]' ); ?>
+                <div class="footer-logo" style="text-align: center;">
+                    <img src="<?= $footer_logo; ?>" style="max-width:250px;margin:15px auto;" class="img-responsive">
+                </div>
+                <div class="footer-address">
+                    <a href="tel:<?= $footerPhone; ?>" style="color:#000000;"><span class="glyphicon glyphicon-phone"></span> <?= $footerPhone; ?></a> | <span class="glyphicon glyphicon-map-marker"></span> <?=$address_line1; ?> | <?=$address_line2; ?> | <span class="glyphicon glyphicon-envelope"></span> <a href="mailto:<?= $footerEmail; ?>" style="color:#000000;"><?= $footerEmail; ?></a>
+                </div>
             </div>
             <div class="modal-footer">
-                <img style="width:40%;float:right;" class="img-responsive" src="/3plus1/wp-content/uploads/2017/03/invitation_signature-1.4.png">
+                <!--<img style="width:40%;float:right;" class="img-responsive" src="/3plus1/wp-content/uploads/2017/03/invitation_signature-1.4.png">-->
             </div>
         </div>
     </div>

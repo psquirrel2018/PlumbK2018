@@ -22,15 +22,22 @@ $team_bg = get_post_meta($post->ID, '_one_front_team_background_image', true);
                     $Gallery2 = get_post_meta( $gallery_id, 'pks_gallery_group', true ); // this particular instance spits out 33 which is entered into a field in wp-admin
                     foreach( (array) $Gallery2 as $Gallery ){
                         // Default all variables in case they are not defined in the dataset.
-                        $photo = '';
+                        $photo = $photo_full = '' ;
 
                         if ( isset( $Gallery['image_id'] ) ) {
                             $photo = wp_get_attachment_image($Gallery['image_id'], 'share-pick', null, array(
-                                'class' => 'thumb  img-responsive',
+                                'class' => 'img-responsive',
+                            ));
+                        }
+                        if ( isset( $Gallery['image_id'] ) ) {
+                            $photo_full = wp_get_attachment_image_url($Gallery['image_id'], 'full', null, array(
+                                'class' => 'img-responsive',
                             ));
                         } ?>
-                        <div class="gallery-image">
-                            <div class="gallery-photo"><?= $photo; ?></div>
+                        <div class="gallery-item">
+                            <a href="<?= $photo_full; ?>" rel="gallery1" class="" data-group="gallery">
+                                <?= $photo; ?>
+                            </a>
                         </div>
                     <?php } // END foreach ?>
                 </div>
