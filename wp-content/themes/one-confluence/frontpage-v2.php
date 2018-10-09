@@ -317,7 +317,7 @@ if (function_exists('one_get_option')) {
                         <img src="<?= $footer_logo; ?>" class="img-responsive">
                     </div>
                     <div class="col-xs-12 footer-address">
-                        <a href="tel:<?= $footerPhone; ?>"><span class="glyphicon glyphicon-phone"></span> <?= $footerPhone; ?></a> | <span class="glyphicon glyphicon-map-marker"></span> <?=$address_line1; ?> | <?=$address_line2; ?> | <span class="glyphicon glyphicon-envelope"></span> <?= $footerEmail; ?>
+                        <a href="tel:<?= $footerPhone; ?>"><span class="glyphicon glyphicon-phone"></span> <?= $footerPhone; ?></a> | <span class="glyphicon glyphicon-map-marker"></span> <?=$address_line1; ?> | <?=$address_line2; ?> | <span class="glyphicon glyphicon-envelope"></span> <a href="mailto:<?= $footerEmail; ?>"><?= $footerEmail; ?></a>
                     </div>
                 </div>
                 <div class="row">

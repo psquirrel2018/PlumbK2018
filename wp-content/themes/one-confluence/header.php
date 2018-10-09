@@ -40,13 +40,12 @@
     <div id="header" class="header navbar-fixed-top2 unstuck" style="">
         <div class="header-container container">
             <!-- Navigation -->
-            <nav id="pnav" class="navbar navbar-default navbar-left main-menu">
+            <nav id="pnav" class="navbar navbar-default navbar-left main-menu" role="navigation">
                 <a id="home-link" class="hidden-xs" href="#page-top">
                 </a>
-
                 <div id="menu-left" class="menu">
                     <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" aria-controls="navbar">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -56,19 +55,16 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <?php
-                        //echo one_front_nav();
-
                         if ( wp_is_mobile() ) {
                             one_mobile_nav();
                         } else {
                             one_front_nav();
                         }
                         ?>
-
                     </div><!-- /.navbar-collapse -->
                 </div>
             </nav>
-            <nav id="pnav-right" class="navbar navbar-default navbar-right main-menu hidden-sm">
+            <nav id="pnav-right" class="navbar navbar-default navbar-right main-menu">
                 <div id="menu-right" class="menu2">
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
@@ -81,3 +77,11 @@
         </div>
     </div>
 <!-- /Header Content -->
+    <script type="text/javascript">
+        jQuery( document ).ready(function() {
+            jQuery('.navbar-collapse a').click(function(){
+                jQuery('.navbar-collapse').css('height', '0');
+                jQuery('.navbar-collapse').removeClass('in');
+            });
+        });
+    </script>

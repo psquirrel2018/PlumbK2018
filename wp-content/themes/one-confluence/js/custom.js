@@ -54,6 +54,17 @@
         }
     );
 
+    /* Magnific Popup */
+
+    $('.gallery-item').magnificPopup({
+        delegate: 'a', // child items selector, by clicking on it popup will open
+        type: 'image',
+        closeOnContentClick: true,
+        closeBtnInside: false,
+        gallery: { enabled:true }
+        // other options
+    });
+
     // Carousels
 
     $("#team .owl-carousel").owlCarousel({
@@ -498,7 +509,7 @@ jQuery(function(){
         .addTo(controller);
 
     //triggerElement
-    var textAnimation = new ScrollMagic.Scene({
+    /*var textAnimation = new ScrollMagic.Scene({
         triggerElement:'#trigger1',
         duration: 20
     })
@@ -738,6 +749,7 @@ jQuery(function(){
         */
 
 });
+
 
 /*jQuery('#scrollspy-progress').find('a').click(function(event) {
     event.preventDefault();
