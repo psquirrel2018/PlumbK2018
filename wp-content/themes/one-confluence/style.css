@@ -601,9 +601,9 @@ img.desaturate4 {filter: grayscale(100%);}
 .border-left1 {background: url('assets/string-sketch-sm.png');background-size:10px;opacity: 0.8;
     background-repeat:no-repeat;background-position-x: 0;background-position-y: 0;}
 .border-left2 {background: url('assets/string-sketch-sm.png');background-size:10px;opacity: 0.8;
-    background-repeat:no-repeat;background-position-x: 0;background-position-y: 0;margin-left: 5px;}
+    background-repeat:no-repeat;background-position-x: 0;background-position-y: 0;margin-left: 4px;}
 .border-left3 {background: url('assets/string-sketch-sm.png');background-size:10px;opacity: 0.8;
-    background-repeat:no-repeat;background-position-x: 0;background-position-y: 0;margin-left:10px;}
+    background-repeat:no-repeat;background-position-x: 0;background-position-y: 0;margin-left:8px;}
 /*.pb-bg {height:150px;background: url('http://pks.local/wp-content/uploads/2018/04/plumb-bob.jpeg');background-size:contain;
     background-repeat:no-repeat;background-position-x: 25px;background-position-y: -4px; }*/
 .pb-bottom {width:300px;
@@ -864,7 +864,7 @@ and (min-width : 1024px) {
     /*.text-overlay-right {margin-top:125px;padding:10px 0;}
     .text-overlay-left {margin-top:125px;padding:10px 0;}*/
     .modal-dialog {
-        width: 800px;
+        width: 600px;
         position: fixed;
         bottom: 60px;
         left:34%;
@@ -880,7 +880,7 @@ and (min-width : 1024px) {
 @media only screen
 and (min-width : 1224px) {
     .modal-dialog {
-        width: 800px;
+        width: 600px;
         position: fixed;
         bottom: 60px;
         left:20%;
@@ -913,7 +913,7 @@ and (min-width : 1440px) {
         padding-top: 260px;
     }
     .modal-dialog {
-        width: 1000px;
+        width: 600px;
         position: fixed;
         bottom: 60px;
         left:21%;
@@ -932,7 +932,7 @@ and (min-width : 1624px) {
     .text-overlay-right {margin-top:0;margin-left:-50px;padding:120px 40px;}
     .text-overlay-left {margin-top:0;margin-left:-50px;padding:120px 40px;}
     .modal-dialog {
-        width: 1000px;
+        width: 600px;
         position: fixed;
         bottom: 60px;
         left:21%;
