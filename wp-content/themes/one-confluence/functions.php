@@ -7,6 +7,42 @@ require_once( dirname(__FILE__) . '/lib/one-frontpage-options.php');
 require_once( dirname(__FILE__) . '/lib/team-functions.php');
 require_once( dirname(__FILE__) . '/lib/gallery-functions.php');
 require_once( dirname(__FILE__) . '/lib/wp_bootstrap_navwalker.php');
+require_once( dirname(__FILE__) . '/lib/slider-functions-repeatablefields.php');
+require_once( dirname(__FILE__) . '/lib/aq_resizer.php');
+//equire_once( dirname(__FILE__) . '/lib/wp-bootstrap-navwalker.php');
+require_once( dirname(__FILE__) . '/lib/tgm-plugin-activation/class-tgm-plugin-activation.php');
+
+function cws_multitheme_register_required_plugins() {
+    /*
+     * Array of plugin arrays. Required keys are name and slug.
+     * If the source is NOT from the .org repo, then source is also required.
+     */
+    $plugins = array(
+        // This is an example of how to include a plugin from the WordPress Plugin Repository.
+        array(
+            'name'      => 'CMB2',
+            'slug'      => 'cmb2',
+            'required'  => true,
+        ),
+    );
+
+    $config = array(
+        'id'           => 'tgmpa',                 // Unique ID for hashing notices for multiple instances of TGMPA.
+        'default_path' => '',                      // Default absolute path to bundled plugins.
+        'menu'         => 'tgmpa-install-plugins', // Menu slug.
+        'parent_slug'  => 'themes.php',            // Parent menu slug.
+        'capability'   => 'edit_theme_options',    // Capability needed to view plugin install page, should be a capability associated with
+        // the parent menu used.
+        'has_notices'  => true,                    // Show admin notices or not.
+        'dismissable'  => true,                    // If false, a user cannot dismiss the nag message.
+        'dismiss_msg'  => '',                      // If 'dismissable' is false, this message will be output at top of nag.
+        'is_automatic' => false,                   // Automatically activate plugins after installation or not.
+        'message'      => '',                      // Message to output right before the plugins table.
+
+    );
+
+    tgmpa( $plugins, $config );
+}
 
 /**
  * Including all required style files in the theme
@@ -17,12 +53,14 @@ function oneConfluence_styles() {
     wp_register_style('font-awesome.min', get_template_directory_uri() .'/css/font-awesome.min.css', array(), null, 'all' );
     wp_register_style('owl-carousel', get_template_directory_uri() .'/css/owl.carousel.css', array(), null, 'all' );
     wp_register_style('mfp-css', get_template_directory_uri() .'/css/magnific-popup.css', array(), null, 'all' );
+    wp_register_style('flickity-css', get_template_directory_uri() .'/css/flickity.min.css', array(), null, 'all' );
     wp_register_style('styles', get_stylesheet_uri(), array(), '2.7.0','all' );
     wp_enqueue_style( 'bootstrap' );
     wp_enqueue_style( 'owl-carousel' );
     wp_enqueue_style( 'fotorama' );
     wp_enqueue_style( 'font-awesome.min' );
     wp_enqueue_style( 'mfp-css' );
+    wp_enqueue_style( 'flickity-css' );
     wp_enqueue_style( 'styles' );
     /**
      * Google fonts-opensans
@@ -48,6 +86,7 @@ function oneConfluence_scripts() {
     wp_enqueue_script('sticky', get_template_directory_uri() . '/js/sticky.js', array('jquery', 'waypoints'), '', true);
     wp_enqueue_script( 'grayscale', get_template_directory_uri() . '/js/jquery.gray.min.js');
     wp_enqueue_script('mfp', get_template_directory_uri() . '/js/jquery.magnific-popup.js', array('jquery'), '1.0.0', true );
+    wp_enqueue_script('flickity', get_template_directory_uri() . '/js/flickity.pkgd.min.js', array('jquery'), '1.0.0', true );
     wp_enqueue_script('settings', get_template_directory_uri() . '/js/custom.js', array('jquery'), '', true);
 
      /**
@@ -63,6 +102,39 @@ function oneConfluence_scripts() {
 }
 
 add_action('wp_enqueue_scripts', 'oneConfluence_scripts');
+
+//Creating Custom Post types for the homepage slider
+function setup_slides_cpt(){
+    $labels = array(
+        'name' => _x('slides', 'post type general name'),
+        'singular_name' => _x('Slide', 'post type singular name'),
+        'add_new' => _x('Add New', 'slide'),
+        'add_new_item' => __('Add New Slide'),
+        'edit_item' => __('Edit Slide'),
+        'new_item' => __('New Slide'),
+        'all_items' => __('All Slides'),
+        'view_item' => __('View Slide'),
+        'search_items' => __('Search Slides'),
+        'not_found' => __('No Slides Found'),
+        'not_found_in_trash' => __('No Slides found in the trash'),
+        'parent_item_colon' => '',
+        'menu_name' => 'Slides'
+    );
+    $args = array(
+        'labels' => $labels,
+        'description' => 'The homepage slides',
+        'rewrite' => array('slug' => 'slides'),
+        'public' => true,
+        'menu_position' => 5,
+        'supports' => array('title', 'thumbnail', 'excerpt', 'custom-fields'),
+        'has_archive' => true,
+        'taxonomies' => array(''),
+        'menu_icon' => 'dashicons-images-alt2',
+    );
+    register_post_type('slides', $args);
+}
+add_action('init', 'setup_slides_cpt');
+
 
 /**
  * One Theme setup

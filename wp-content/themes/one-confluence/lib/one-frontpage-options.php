@@ -58,6 +58,29 @@ function one_register_frontpage_metabox() {
         // 'closed'     => true, // true to keep the metabox closed by default
     ) );
 
+    // Static Hero vs. Slider toggle
+    $cmb_demo->add_field( array(
+        'name'    => 'This Radio button determines which layout to use for the top of the site',
+        'id'      => $prefix .'hero_layout',
+        'type'    => 'radio_inline',
+        'options' => array(
+            'hero' => __( 'Static Hero', 'cmb2' ),
+            'slider'   => __( 'Slider/Carousel', 'cmb2' ),
+        ),
+        'default' => 'hero',
+    ) );
+
+    // This is the Slider ID
+    $cmb_demo->add_field( array(
+        'name' => __( 'Post ID for the Homepage Slider', 'cmb2' ),
+        'desc' => __( 'This is the post id of the Homepage Slider section that is to be used on the homepage, if a static hero image is not selected.', 'cmb2' ),
+        'id'   => $prefix . 'slider_id',
+        'type' => 'text',
+        'before_row'   => '<div style="padding:30px 0;">This is the To Slider Section that puts a slider at the top of the website:  <b>"POST ID"</b></div>',
+        // 'protocols' => array('http', 'https', 'ftp', 'ftps', 'mailto', 'news', 'irc', 'gopher', 'nntp', 'feed', 'telnet'), // Array of allowed protocols
+        // 'repeatable' => true,
+    ) );
+
         $cmb_demo->add_field( array(
         'name' => __( 'Block One: Image', 'cmb2' ),
         'desc' => __( 'This is the main intro/hero image at the top of the page.', 'cmb2' ),
