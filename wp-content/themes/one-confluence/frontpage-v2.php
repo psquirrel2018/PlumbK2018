@@ -45,7 +45,8 @@ $bottomTitleFive = get_post_meta($post->ID, '_one_front_five_bottom', true);
 $imageFive = get_post_meta($post->ID, '_one_front_five_image', true);
 $descriptionFive = get_post_meta($post->ID, '_one_front_five_wysiwyg', true);
 
-//block Six variables - CTA/Bookend Variables
+//block Six variables - CTA/Bookend Variables - No longer in use in the 11/08/18 version of the project
+/*
 $imageSix = get_post_meta($post->ID, '_one_front_six_image', true);
 $descriptionSix = get_post_meta($post->ID, '_one_front_six_wysiwyg', true);
 $ctaTitleOne = get_post_meta($post->ID, '_one_front_six_why_title', true);
@@ -55,6 +56,7 @@ $why = get_post_meta($post->ID, '_one_front_six_why', true);
 $how = get_post_meta($post->ID, '_one_front_six_how', true);
 $when = get_post_meta($post->ID, '_one_front_six_when', true);
 $ctaUrl = get_post_meta($post->ID, '_one_front_cta_url', true);
+*/
 
 //Team Variables
 $teamLayout = get_post_meta($post->ID, 'team_layout', true);
@@ -133,6 +135,7 @@ if (function_exists('one_get_option')) {
     <div id="main-container" class="container-fluid">
 
         <?php
+            // Flickity slider is implemented, but not styled and is still a little buggy. 11/08/18
             if ($heroLayout === 'slider') { get_template_part('templates/flickity'); }
             else { ?>
 
@@ -159,7 +162,6 @@ if (function_exists('one_get_option')) {
 
             </div>
             <div class="col-sm-7 col-md-7 col-lg-5 col-lg-push-4">
-
                 <img src="<?= $imageThree; ?>" class="img-responsive desaturate2" style="width:85%;">
             </div>
 
@@ -173,16 +175,6 @@ if (function_exists('one_get_option')) {
                 <div class="featured-content copy"><h2 id="triggerCreative"><?= $topTitleFour; ?></h2><?= $descriptionFour; ?></div>
             </div>
         </section>
-
-        <?php
-        /*$team2 = get_post_meta( $team_id, 'pks_team_group', true ); // this particular instance spits out 32 which is entered into a field in wp-admin
-        $team = (is_array($team2) && is_array(current($team2))) ? current($team2) : array();
-        if( count($team2) > 1 || is_array($team) && array_key_exists('name', $team) && !empty($team['name']) ||
-            array_key_exists('photo', $team) && !empty($team['photo']) )
-            ||
-            array_key_exists('title', $team) && !empty($team['title']) ||
-            array_key_exists('bio', $team) && !empty($team['bio']) )
-        { */ ?>
 
         <?php
         if ($teamLayout === 'fluid') { get_template_part('templates/team-fluid'); }
@@ -226,8 +218,6 @@ if (function_exists('one_get_option')) {
                 </div>
             </section>
         <?php } ?>
-
-
 
         <section id="solutions" class="row" data-title="<?= $topTitleFive; ?>">
             <div class="col-sm-5 col-md-4 col-lg-2 col-lg-push-3 text-overlay-left clearfix">
@@ -285,8 +275,6 @@ if (function_exists('one_get_option')) {
             </div>
         </section>
 
-
-
         <?php
         if ($galleryLayout === 'fluid') { get_template_part('templates/gallery-fluid'); }
         else { ?>
@@ -317,7 +305,7 @@ if (function_exists('one_get_option')) {
             </section>
         <?php } ?>
 
-        <section id="purpose-bottom" class="row footer-wrapper" data-title="PURPOSE!" style="background-image:url('');">
+        <section id="purpose-bottom" class="row footer-wrapper" data-title="PURPOSE!">
             <div class="container">
                 <div id="footer-bottom" class="row bottom-info">
                     <div class="col-xs-6 col-xs-push-3 col-sm-4 col-sm-push-4 col-md-2 col-md-push-5 col-lg-3 col-lg-push-4 footer-logo">
@@ -360,7 +348,5 @@ if (function_exists('one_get_option')) {
                 </div>
             </div>
         </section>
-
-
     </div>
 <?php get_footer(); ?>
