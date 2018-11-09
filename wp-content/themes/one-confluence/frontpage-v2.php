@@ -45,18 +45,6 @@ $bottomTitleFive = get_post_meta($post->ID, '_one_front_five_bottom', true);
 $imageFive = get_post_meta($post->ID, '_one_front_five_image', true);
 $descriptionFive = get_post_meta($post->ID, '_one_front_five_wysiwyg', true);
 
-//block Six variables - CTA/Bookend Variables - No longer in use in the 11/08/18 version of the project
-/*
-$imageSix = get_post_meta($post->ID, '_one_front_six_image', true);
-$descriptionSix = get_post_meta($post->ID, '_one_front_six_wysiwyg', true);
-$ctaTitleOne = get_post_meta($post->ID, '_one_front_six_why_title', true);
-$ctaTitleTwo = get_post_meta($post->ID, '_one_front_six_how_title', true);
-$ctaTitleThree = get_post_meta($post->ID, '_one_front_six_when_title', true);
-$why = get_post_meta($post->ID, '_one_front_six_why', true);
-$how = get_post_meta($post->ID, '_one_front_six_how', true);
-$when = get_post_meta($post->ID, '_one_front_six_when', true);
-$ctaUrl = get_post_meta($post->ID, '_one_front_cta_url', true);
-*/
 
 //Team Variables
 $teamLayout = get_post_meta($post->ID, 'team_layout', true);
