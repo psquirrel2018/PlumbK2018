@@ -29,8 +29,11 @@
     <section id="purpose" data-title="Purpose" style="background-color: <?= $header_bg_color; ?>">
         <div class="container purpose">
             <div class="row">
-                <div class="col-xs-6 col-xs-push-3 col-sm-4 col-sm-push-4">
+                <div class="col-xs-6 col-xs-push-3 col-sm-4 col-sm-push-1">
                     <img src="<?= $site_logo; ?>" class="logo-responsive" />
+                </div>
+                <div class="col-xs-6 col-xs-push-3 col-sm-2 col-sm-push-4">
+                    <img src="/wp-content/uploads/2018/11/G.52.sm_.png" class="logo-responsive" />
                 </div>
             </div>
 

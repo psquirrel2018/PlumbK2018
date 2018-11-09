@@ -119,7 +119,8 @@ input, select {vertical-align:middle;}
     padding-bottom:10px;
 }
 
-#main-container {margin-top:-15px;}
+#main-container {margin-top:-60px;}
+
 
 #nav.affix {
     position: fixed;
@@ -598,12 +599,14 @@ img.desaturate4 {filter: grayscale(100%);}
 .tween-et {opacity:0.0;}
 
 .border-left {margin-left:1px;margin-top:-4px;}
-.border-left1 {background: url('assets/string-sketch-sm.png');background-size:10px;opacity: 0.8;
-    background-repeat:no-repeat;background-position-x: 0;background-position-y: 0;}
-.border-left2 {background: url('assets/string-sketch-sm.png');background-size:10px;opacity: 0.8;
-    background-repeat:no-repeat;background-position-x: 0;background-position-y: 0;margin-left: 5px;}
-.border-left3 {background: url('assets/string-sketch-sm.png');background-size:10px;opacity: 0.8;
-    background-repeat:no-repeat;background-position-x: 0;background-position-y: 0;margin-left:10px;}
+.border-left1 {background: url('assets/string-sketch-sm-10-12-18.png');background-size:10px;opacity: 0.8;
+    background-repeat:no-repeat;background-position-x: 0;background-position-y: 0;margin-left:-1px;}
+.border-left2 {background: url('assets/string-sketch-sm-10-12-18.png');background-size:10px;opacity: 0.8;
+    background-repeat:no-repeat;background-position-x: 0;background-position-y: 0;margin-left: -1px;}
+.border-left3 {background: url('assets/string-sketch-sm-10-12-18.png');background-size:10px;opacity: 0.8;
+    background-repeat:no-repeat;background-position-x: 0;background-position-y: 0;margin-left:-1px;}
+.border-left4 {background: url('assets/string-sketch-sm-10-12-18.png');background-size:10px;opacity: 0.8;
+    background-repeat:no-repeat;background-position-x: 0;background-position-y: 0;margin-left:-1px;}
 /*.pb-bg {height:150px;background: url('http://pks.local/wp-content/uploads/2018/04/plumb-bob.jpeg');background-size:contain;
     background-repeat:no-repeat;background-position-x: 25px;background-position-y: -4px; }*/
 .pb-bottom {width:300px;
@@ -612,7 +615,7 @@ img.desaturate4 {filter: grayscale(100%);}
 .pb-container {
     width: 300px;
     position: relative;
-    left: -74px;
+    left: -88px;
     top: -22px;
     opacity:1.0;
     float:left;
@@ -674,6 +677,8 @@ and (max-device-width : 480px) {
 
 }
 
+.sticky-wrapper{position:relative;z-index:3500;}
+
 /* push sticky nav down when admin bar is visible.  only applies to admin that are logged in... */
 .admin-bar .stuck {
     top: 32px;
@@ -719,6 +724,14 @@ and (max-device-width : 480px) {
         background-position-y: 0;
         opacity: 0.8;
     }
+    .border-left4 {
+        background: transparent;
+        background-size: 0;
+        background-repeat: no-repeat;
+        background-position-x: 0;
+        background-position-y: 0;
+        opacity: 0.8;
+    }
     .menu {
         background-image: url('');
         background: transparent;
@@ -756,7 +769,7 @@ and (max-device-width : 480px) {
     .bottom-info {margin-top:130px;}
     .cta-content {width:50%; margin:0 0 0 45%;}
     .footer-logo{padding-bottom:15px;}
-    .team_div {background-image:url('/3plus1/wp-content/uploads/2017/03/team_comp_1.1.png') !important; background-size:cover; }
+    .team_div {background-size:cover; }
     .details{
         margin-top:5px;
         width:100%;
@@ -772,6 +785,8 @@ and (max-device-width : 480px) {
     .pb-container {
         left: -100px;
     }
+    .owl-prev {left:0;}
+    .owl-next {right:0;}
 }
 
 @media screen and (max-height: 450px) {
@@ -784,6 +799,14 @@ and (max-device-width : 480px) {
 /* Smartphones (landscape) ----------- */
 @media only screen
 and (min-width : 321px) {
+    .tween1,.tween2,.tween3,.tween4,.tween5,.tween6,.tween7,.tween8,.tween9,.tween10 {font-size:18px;color:#000000;}
+    .pb-container {
+        width: 250px;
+    }
+    .contact-us-button {
+        margin-left: 0px;
+
+    }
 }
 
 /* Smartphones (portrait) ----------- */
@@ -850,6 +873,45 @@ and (orientation : portrait) {
     #purpose-bottom {height:660px;}
     .bottom-info {margin-left:-15px; margin-right:-15px;margin-top:220px;}
 
+    #myContainer {
+        line-height: 34px;
+    }
+
+    .wian-header.sketch-bg {
+        margin-bottom: -56px;margin-left:-2px;
+    }
+
+    .tween1,.tween2,.tween3,.tween4,.tween5,.tween6,.tween7,.tween8,.tween9,.tween10 {font-size:20px;color:#000000;}
+
+    .border-left {margin-left:1px;margin-top:-4px;}
+    .border-left1 {background: url('assets/string-sketch-sm-10-12-18.png');background-size:10px;opacity: 0.8;
+        background-repeat:no-repeat;background-position-x: 0;background-position-y: 0;margin-left:-1px;}
+    .border-left2 {background: url('assets/string-sketch-sm-10-12-18.png');background-size:10px;opacity: 0.8;
+        background-repeat:no-repeat;background-position-x: 0;background-position-y: 0;margin-left: -1px;}
+    .border-left3 {background: url('assets/string-sketch-sm-10-12-18.png');background-size:10px;opacity: 0.8;
+        background-repeat:no-repeat;background-position-x: 0;background-position-y: 0;margin-left:-1px;}
+    .border-left4 {background: url('assets/string-sketch-sm-10-12-18.png');background-size:10px;opacity: 0.8;
+        background-repeat:no-repeat;background-position-x: 0;background-position-y: 0;margin-left:-1px;}
+    /*.pb-bg {height:150px;background: url('http://pks.local/wp-content/uploads/2018/04/plumb-bob.jpeg');background-size:contain;
+        background-repeat:no-repeat;background-position-x: 25px;background-position-y: -4px; }*/
+    .pb-bottom {width:300px;
+    }
+    .sketch-container {
+        margin-left: 0;
+    }
+
+    .pb-container {
+        width: 300px;
+        position: relative;
+        left: -112px;
+        top: -22px;
+        opacity:1.0;
+        float:left;
+    }
+    .contact-us-button {
+        margin-left: -48px;
+    }
+
 }
 
 
@@ -874,13 +936,49 @@ and (min-width : 1024px) {
     .whw-container {
         padding-top: 140px;
     }
+
+    #myContainer {
+        line-height: 34px;
+    }
+
+    .wian-header.sketch-bg {
+        margin-bottom: -30px;
+    }
+
+    .tween1,.tween2,.tween3,.tween4,.tween5,.tween6,.tween7,.tween8,.tween9,.tween10 {font-size:20px;color:#000000;}
+
+    .border-left {margin-left:1px;margin-top:-4px;}
+    .border-left1 {background: url('assets/string-sketch-sm-10-12-18.png');background-size:10px;opacity: 0.8;
+        background-repeat:no-repeat;background-position-x: 0;background-position-y: 0;margin-left:-1px;}
+    .border-left2 {background: url('assets/string-sketch-sm-10-12-18.png');background-size:10px;opacity: 0.8;
+        background-repeat:no-repeat;background-position-x: 0;background-position-y: 0;margin-left: -1px;}
+    .border-left3 {background: url('assets/string-sketch-sm-10-12-18.png');background-size:10px;opacity: 0.8;
+        background-repeat:no-repeat;background-position-x: 0;background-position-y: 0;margin-left:-1px;}
+    .border-left4 {background: url('assets/string-sketch-sm-10-12-18.png');background-size:10px;opacity: 0.8;
+        background-repeat:no-repeat;background-position-x: 0;background-position-y: 0;margin-left:-1px;}
+    /*.pb-bg {height:150px;background: url('http://pks.local/wp-content/uploads/2018/04/plumb-bob.jpeg');background-size:contain;
+        background-repeat:no-repeat;background-position-x: 25px;background-position-y: -4px; }*/
+    .pb-bottom {width:300px;
+    }
+    .sketch-container {
+        margin-left: 0;
+    }
+
+    .pb-container {
+        width: 300px;
+        position: relative;
+        left: -94px;
+        top: -22px;
+        opacity:1.0;
+        float:left;
+    }
 }
 
 /* Desktops and laptops ----------- */
 @media only screen
 and (min-width : 1224px) {
     .modal-dialog {
-        width: 800px;
+        width: 600px;
         position: fixed;
         bottom: 60px;
         left:20%;
@@ -904,6 +1002,42 @@ and (min-width : 1200px) {
     .whw-container {
         padding-top: 200px;
     }
+
+    #myContainer {
+        line-height: 46px;
+    }
+
+    .wian-header.sketch-bg {
+        margin-bottom: -30px;
+    }
+
+    .tween1,.tween2,.tween3,.tween4,.tween5,.tween6,.tween7,.tween8,.tween9,.tween10 {font-size:32px;color:#000000;}
+
+    .border-left {margin-left:1px;margin-top:-4px;}
+    .border-left1 {background: url('assets/string-sketch-sm-10-12-18.png');background-size:10px;opacity: 0.8;
+        background-repeat:no-repeat;background-position-x: 0;background-position-y: 0;margin-left:-1px;}
+    .border-left2 {background: url('assets/string-sketch-sm-10-12-18.png');background-size:10px;opacity: 0.8;
+        background-repeat:no-repeat;background-position-x: 0;background-position-y: 0;margin-left: -1px;}
+    .border-left3 {background: url('assets/string-sketch-sm-10-12-18.png');background-size:10px;opacity: 0.8;
+        background-repeat:no-repeat;background-position-x: 0;background-position-y: 0;margin-left:-2px;}
+    .border-left4 {background: url('assets/string-sketch-sm-10-12-18.png');background-size:10px;opacity: 0.8;
+        background-repeat:no-repeat;background-position-x: 0;background-position-y: 0;margin-left:-2px;}
+    /*.pb-bg {height:150px;background: url('http://pks.local/wp-content/uploads/2018/04/plumb-bob.jpeg');background-size:contain;
+        background-repeat:no-repeat;background-position-x: 25px;background-position-y: -4px; }*/
+    .pb-bottom {width:300px;
+    }
+    .sketch-container {
+        margin-left: 10px;
+    }
+
+    .pb-container {
+        width: 300px;
+        position: relative;
+        left: -88px;
+        top: -22px;
+        opacity:1.0;
+        float:left;
+    }
 }
 
 @media only screen
@@ -913,7 +1047,7 @@ and (min-width : 1440px) {
         padding-top: 260px;
     }
     .modal-dialog {
-        width: 1000px;
+        width: 600px;
         position: fixed;
         bottom: 60px;
         left:21%;
@@ -932,7 +1066,7 @@ and (min-width : 1624px) {
     .text-overlay-right {margin-top:0;margin-left:-50px;padding:120px 40px;}
     .text-overlay-left {margin-top:0;margin-left:-50px;padding:120px 40px;}
     .modal-dialog {
-        width: 1000px;
+        width: 600px;
         position: fixed;
         bottom: 60px;
         left:21%;
