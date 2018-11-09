@@ -97,7 +97,7 @@ function one_register_frontpage_metabox() {
         // 'repeatable' => true,
     ) );
 
-   /* $cmb_demo->add_field( array(
+    $cmb_demo->add_field( array(
         'name' => __( 'Block One: Sub-Heading Title', 'cmb2' ),
         'desc' => __( 'This is a sub heading that goes just below the Top Title.  This is an H2.', 'cmb2' ),
         'id'   => $prefix . 'one_bottom',
@@ -114,7 +114,7 @@ function one_register_frontpage_metabox() {
         'options' => array( 'textarea_rows' => 2, ),
     ) );
 
-    $cmb_demo->add_field( array(
+    /*$cmb_demo->add_field( array(
         'name' => __( 'Block One: URL', 'cmb2' ),
         'desc' => __( 'field description (optional)', 'cmb2' ),
         'id'   => $prefix . 'one_url',

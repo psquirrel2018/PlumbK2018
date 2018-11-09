@@ -18,6 +18,7 @@ $topTitleOne = get_post_meta($post->ID, '_one_front_one_top', true);
 $bottomTitleOne = get_post_meta($post->ID, '_one_front_one_bottom', true);
 $imageOne = get_post_meta($post->ID, '_one_front_one_image', true);
 $descriptionOne = get_post_meta($post->ID, '_one_front_one_wysiwyg', true);
+$topTitleSubHeadingOne = get_post_meta($post->ID, '_one_front_one_bottom', true);
 //$urlOne = get_post_meta($post->ID, '_one_front_one_url', true);
 
 //block Two variables
@@ -121,16 +122,17 @@ if (function_exists('one_get_option')) {
 ?>
 
     <div id="main-container" class="container-fluid">
-
         <?php
             // Flickity slider is implemented, but not styled and is still a little buggy. 11/08/18
             if ($heroLayout === 'slider') { get_template_part('templates/flickity'); }
             else { ?>
-
         <section id="passion" class="row" data-title="<?= $topTitleOne; ?>">
-            <div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 text-center" style="padding:0;">
-                <img style="width:80%;" class="img-responsive" id="floorplan" src="<?= $imageOne; ?>">
-            </div>
+        <div class="col-sm-5 col-md-4 col-lg-2 col-lg-push-3 text-overlay-left clearfix">
+            <div class="featured-content-left copy"><h2 id="triggerScience"><?= $topTitleOne; ?></h2><?= $descriptionOne; ?><div style="font-weight:600;float:right;padding-top:10px;"><?=$topTitleSubHeadingOne ?></div></div>
+        </div>
+        <div class="col-sm-7 col-md-7 col-lg-5 col-lg-push-4">
+            <img src="<?= $imageOne; ?>" class="img-responsive desaturate2" style="width:75%;">
+        </div>
         </section>
         <?php } ?>
 
@@ -140,7 +142,6 @@ if (function_exists('one_get_option')) {
             </div>
             <div class="col-sm-5 col-md-4 col-md-pull-1 col-lg-2 col-lg-push-2 text-overlay-right">
                 <div class="featured-content copy"><h2 id="triggerArt"><?= $topTitleTwo; ?></h2><?= $descriptionTwo; ?></div>
-
             </div>
         </section>
 
@@ -152,7 +153,6 @@ if (function_exists('one_get_option')) {
             <div class="col-sm-7 col-md-7 col-lg-5 col-lg-push-4">
                 <img src="<?= $imageThree; ?>" class="img-responsive desaturate2" style="width:85%;">
             </div>
-
         </section>
 
         <section id="creative" class="row" data-title="<?= $topTitleFour; ?>">
