@@ -9,7 +9,7 @@ require_once( dirname(__FILE__) . '/lib/gallery-functions.php');
 require_once( dirname(__FILE__) . '/lib/wp_bootstrap_navwalker.php');
 require_once( dirname(__FILE__) . '/lib/slider-functions-repeatablefields.php');
 require_once( dirname(__FILE__) . '/lib/aq_resizer.php');
-//equire_once( dirname(__FILE__) . '/lib/wp-bootstrap-navwalker.php');
+//equire_once( dirname(__FILE__) . '/lib/wp-bootstrap-navwalker.php'); // Not using today, but might need in near future.
 require_once( dirname(__FILE__) . '/lib/tgm-plugin-activation/class-tgm-plugin-activation.php');
 
 function cws_multitheme_register_required_plugins() {
@@ -44,9 +44,7 @@ function cws_multitheme_register_required_plugins() {
     tgmpa( $plugins, $config );
 }
 
-/**
- * Including all required style files in the theme
- */
+/** Including all required style files in the theme **/
 function oneConfluence_styles() {
     wp_register_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.css', array(), '1', 'all' );
     wp_register_style('fotorama', get_template_directory_uri() .'/css/fotorama.css', array(), '1', 'all' );
@@ -62,18 +60,14 @@ function oneConfluence_styles() {
     wp_enqueue_style( 'mfp-css' );
     wp_enqueue_style( 'flickity-css' );
     wp_enqueue_style( 'styles' );
-    /**
-     * Google fonts-opensans
-     */
+    /** Google fonts-opensans **/
     wp_enqueue_style('one-opensans', '//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300,400italic');
     wp_enqueue_style('one-anton', '//fonts.googleapis.com/css?family=Anton:400,600,700,800');
 }
 
 add_action('wp_enqueue_scripts', 'oneConfluence_styles');
 
-/**
- * Include all required javascript files in the theme
- */
+/** Include all required javascript files in the theme **/
 function oneConfluence_scripts() {
     wp_enqueue_script('modernizr', get_template_directory_uri() . '/js/modernizr.custom.79639.js', array('jquery'));
     wp_enqueue_script('scrollReveal', get_template_directory_uri() . '/js/scrollReveal.js', array('jquery'), '', true);
@@ -89,12 +83,9 @@ function oneConfluence_scripts() {
     wp_enqueue_script('flickity', get_template_directory_uri() . '/js/flickity.pkgd.min.js', array('jquery'), '1.0.0', true );
     wp_enqueue_script('settings', get_template_directory_uri() . '/js/custom.js', array('jquery'), '', true);
 
-     /**
-     * Easing javascript file
-     */
+     /** Easing javascript file **/
     wp_enqueue_script('oneConfluence-easing', 'http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js', array('jquery'), '', true);
     /** scrollmagic.js */
-
     wp_enqueue_script('greensock', '//cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js', array('jquery'), '', true);
     wp_enqueue_script('scrollmagic-min', '//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js', array('jquery'), '', true);
     wp_enqueue_script('animation', '//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js', array('jquery'), '', true);
@@ -135,10 +126,7 @@ function setup_slides_cpt(){
 }
 add_action('init', 'setup_slides_cpt');
 
-
-/**
- * One Theme setup
- */
+/** OneConfluence Theme Setup **/
 function oneConfluence_setup() {
     add_theme_support('post-thumbnails');
     add_image_size('post_thumbnail', 600, 250, true);
@@ -196,17 +184,13 @@ function one_mobile_nav() {
 
 /**
  * Set the content width based on the theme's design and stylesheet.
- *
  * Used to set the width of images and content. Should be equal to the width the theme
  * is designed for, generally via the style.css stylesheet.
  */
 if (!isset($content_width))
     $content_width = 590; //This too was messed up and not being used in this version.  go back to version 2 or 3 to see this.
 
-/**
- * Pagination - This is not used in this version
- *
- */
+/** Pagination - This is not used in this version **/
 
 //Creating Custom Post types for Team
 function setup_team_cpt(){
