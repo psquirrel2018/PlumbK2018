@@ -635,6 +635,11 @@ img.desaturate4 {filter: grayscale(100%);}
 
 /* assets/wp-content/uploads/2018/04/sketch2-full-sketch.png = old sketch */
 
+/* add flickity carousel styles here */
+#flick-container{}
+#flick{}
+.flickity{}
+
 .tween1,.tween2,.tween3,.tween4,.tween5,.tween6,.tween7,.tween8,.tween9,.tween10 {font-size:32px;color:#000000;}
 #pbTrigger, #etTrigger {font-size:32px;}
 /*====================Start Media Queries==================*/
