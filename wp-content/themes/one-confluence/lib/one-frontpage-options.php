@@ -97,6 +97,35 @@ function one_register_frontpage_metabox() {
         // 'repeatable' => true,
     ) );
 
+<<<<<<< HEAD
+=======
+    $cmb_demo->add_field( array(
+        'name' => __( 'Block One: Sub-Heading Title', 'cmb2' ),
+        'desc' => __( 'This is a sub heading that goes just below the Top Title.  This is an H2.', 'cmb2' ),
+        'id'   => $prefix . 'one_bottom',
+        'type' => 'text',
+        // 'protocols' => array('http', 'https', 'ftp', 'ftps', 'mailto', 'news', 'irc', 'gopher', 'nntp', 'feed', 'telnet'), // Array of allowed protocols
+        // 'repeatable' => true,
+    ) );
+
+    $cmb_demo->add_field( array(
+        'name'    => __( 'One wysiwyg', 'cmb2' ),
+        'desc'    => __( 'This is where you would put SEO rich welcome content.', 'cmb2' ),
+        'id'      => $prefix . 'one_wysiwyg',
+        'type'    => 'wysiwyg',
+        'options' => array( 'textarea_rows' => 2, ),
+    ) );
+
+    /*$cmb_demo->add_field( array(
+        'name' => __( 'Block One: URL', 'cmb2' ),
+        'desc' => __( 'field description (optional)', 'cmb2' ),
+        'id'   => $prefix . 'one_url',
+        'type' => 'text_url',
+        // 'protocols' => array('http', 'https', 'ftp', 'ftps', 'mailto', 'news', 'irc', 'gopher', 'nntp', 'feed', 'telnet'), // Array of allowed protocols
+        // 'repeatable' => true,
+    ) );*/
+
+>>>>>>> staging
     $cmb_demo->add_field( array(
         'name' => __( 'Block two: Top Title', 'cmb2' ),
         'desc' => __( 'H1 heading for the second block/section', 'cmb2' ),
