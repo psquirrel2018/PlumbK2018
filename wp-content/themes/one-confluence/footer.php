@@ -42,12 +42,16 @@ if (function_exists('one_get_option')) {
                 <button  class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 <h4 class="modal-title" id="myContactModalLabel">Contact Us</h4>
             </div>
-            <div class="modal-body">
-                <div class="footer-logo" style="text-align: center;">
-                    <img src="<?= $footer_logo; ?>" style="max-width:250px;margin:15px auto;" class="img-responsive">
-                </div>
-                <div class="footer-address">
-                    <a href="tel:<?= $footerPhone; ?>" style="color:#000000;"><span class="glyphicon glyphicon-phone"></span> <?= $footerPhone; ?></a> | <span class="glyphicon glyphicon-map-marker"></span> <?=$address_line1; ?> | <?=$address_line2; ?> | <span class="glyphicon glyphicon-envelope"></span> <a href="mailto:<?= $footerEmail; ?>" style="color:#000000;"><?= $footerEmail; ?></a>
+            <div class="container modal-body" style="max-width:600px;padding:60px;">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <a href="tel:<?= $footerPhone; ?>" style="color:#0a6eb0;"><span class="glyphicon glyphicon-phone"></span> <?= $footerPhone; ?></a> <br />
+                        <span class="glyphicon glyphicon-map-marker"></span> <?=$address_line1; ?> <br /> <?=$address_line2; ?> <br />
+                        <a href="mailto:<?= $footerEmail; ?>" style="color:#0a6eb0;"><span class="glyphicon glyphicon-envelope"></span> <?= $footerEmail; ?></a>
+                    </div>
+                    <div class="col-sm-6" style="text-align: center;">
+                        <img src="<?= $footer_logo; ?>" style="max-width:100%;margin:15px auto;" class="img-responsive">
+                    </div>
                 </div>
             </div>
             <div class="modal-footer">

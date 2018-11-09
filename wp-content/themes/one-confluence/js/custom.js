@@ -54,6 +54,17 @@
         }
     );
 
+    /* Init Flickity - Homepage slider */
+    $('.main-carousel').flickity({
+        // options
+        autoPlay: true,
+        //fullscreen: true,
+        lazyLoad: 1,
+        cellAlign: 'left',
+        wrapAround: true,
+        contain: true
+    });
+
     /* Magnific Popup */
 
     $('.gallery-item').magnificPopup({
@@ -77,13 +88,28 @@
     });
 
     $("#gallery .owl-carousel").owlCarousel({
-        items: 4,
-        margin: 60,
-        autoWidth:false,
+        //items: 4,
+        margin: 30,
+        //autoWidth:false,
         loop: true,
         dots: false,
         nav: true,
-        navText: ['<i class="fa fa-caret-left fa-2x"></i> ','<i class="fa fa-caret-right fa-2x"></i>']
+        navText: ['<i class="fa fa-caret-left fa-2x"></i> ','<i class="fa fa-caret-right fa-2x"></i>'],
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+                nav:true
+            },
+            600:{
+                items:2,
+                nav:true
+            },
+            1000:{
+                items:4,
+                nav:true
+            }
+        }
     });
 
 

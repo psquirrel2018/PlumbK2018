@@ -12,6 +12,8 @@ get_header();
 //redo this so that variables make more sense and line up better.  Also get rid of variables not getting used.
 
 global $post;
+$heroLayout = get_post_meta($post->ID, '_one_front_hero_layout', true);
+
 $topTitleOne = get_post_meta($post->ID, '_one_front_one_top', true);
 $bottomTitleOne = get_post_meta($post->ID, '_one_front_one_bottom', true);
 $imageOne = get_post_meta($post->ID, '_one_front_one_image', true);
@@ -130,11 +132,16 @@ if (function_exists('one_get_option')) {
 
     <div id="main-container" class="container-fluid">
 
+        <?php
+            if ($heroLayout === 'slider') { get_template_part('templates/flickity'); }
+            else { ?>
+
         <section id="passion" class="row" data-title="<?= $topTitleOne; ?>">
             <div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 text-center" style="padding:0;">
                 <img style="width:80%;" class="img-responsive" id="floorplan" src="<?= $imageOne; ?>">
             </div>
         </section>
+        <?php } ?>
 
         <section id="art" class="row" data-title="<?= $topTitleTwo; ?>" data-target="art">
             <div class="col-sm-7 col-md-8 col-md-push-1 col-lg-6 col-lg-push-2 clearfix">
