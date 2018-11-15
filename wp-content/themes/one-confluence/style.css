@@ -347,7 +347,7 @@ ul#one_menu2 { margin: 5px 0 0 50px;}
 }
 
 .featured-content-left.purpose {
-    text-align: center;
+    text-align: right;
     padding: 12px;
     color: #777;
     font-size: 24px;
@@ -355,6 +355,7 @@ ul#one_menu2 { margin: 5px 0 0 50px;}
     font-weight: 900;
     line-height: 26px;
     border-right: 4px solid #f3f3f3;
+    text-transform: capitalize;
 }
 
 .featured-content h2 {margin-bottom: 5px;font-family: 'Open Sans', sans-serif !important;color: #777;font-weight: 600;text-transform: uppercase;}
