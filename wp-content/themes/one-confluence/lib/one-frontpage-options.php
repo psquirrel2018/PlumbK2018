@@ -97,8 +97,6 @@ function one_register_frontpage_metabox() {
         // 'repeatable' => true,
     ) );
 
-<<<<<<< HEAD
-=======
     $cmb_demo->add_field( array(
         'name' => __( 'Block One: Sub-Heading Title', 'cmb2' ),
         'desc' => __( 'This is a sub heading that goes just below the Top Title.  This is an H2.', 'cmb2' ),
@@ -125,7 +123,6 @@ function one_register_frontpage_metabox() {
         // 'repeatable' => true,
     ) );*/
 
->>>>>>> staging
     $cmb_demo->add_field( array(
         'name' => __( 'Block two: Top Title', 'cmb2' ),
         'desc' => __( 'H1 heading for the second block/section', 'cmb2' ),
@@ -406,6 +403,40 @@ function one_register_frontpage_metabox() {
         'id'   => $prefix . 'name_image',
         'type' => 'file',
         'after' => 'This is the image that is used as a button to trigger the modal window.',
+    ) );
+
+    // New What's in a name custom fields - New as of Oct-2018 -
+    // These use the 3-4 paragraphs of text with the plumb bob, Navigate the stars, Eiffel Tower...
+
+    $cmb_demo->add_field( array(
+        'name'    => __( 'Whats in a name Paragraph 1', 'cmb2' ),
+        'desc'    => __( '', 'cmb2' ),
+        'id'      => $prefix . 'name_paragraph_one',
+        'type'    => 'wysiwyg',
+        'options' => array( 'textarea_rows' => 2, ),
+    ) );
+    $cmb_demo->add_field( array(
+        'name'    => __( 'Whats in a name Paragraph 2', 'cmb2' ),
+        'desc'    => __( '', 'cmb2' ),
+        'id'      => $prefix . 'name_paragraph_two',
+        'type'    => 'wysiwyg',
+        'options' => array( 'textarea_rows' => 2, ),
+    ) );
+
+    $cmb_demo->add_field( array(
+        'name'    => __( 'Whats in a name Paragraph 3', 'cmb2' ),
+        'desc'    => __( '', 'cmb2' ),
+        'id'      => $prefix . 'name_paragraph_three',
+        'type'    => 'wysiwyg',
+        'options' => array( 'textarea_rows' => 2, ),
+    ) );
+
+    $cmb_demo->add_field( array(
+        'name'    => __( 'Whats in a name Paragraph 4', 'cmb2' ),
+        'desc'    => __( '', 'cmb2' ),
+        'id'      => $prefix . 'name_paragraph_four',
+        'type'    => 'wysiwyg',
+        'options' => array( 'textarea_rows' => 2, ),
     ) );
 
     $cmb_demo->add_field( array(
