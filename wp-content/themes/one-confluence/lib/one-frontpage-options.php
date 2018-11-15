@@ -97,6 +97,8 @@ function one_register_frontpage_metabox() {
         // 'repeatable' => true,
     ) );
 
+<<<<<<< HEAD
+=======
     $cmb_demo->add_field( array(
         'name' => __( 'Block One: Sub-Heading Title', 'cmb2' ),
         'desc' => __( 'This is a sub heading that goes just below the Top Title.  This is an H2.', 'cmb2' ),
@@ -123,6 +125,7 @@ function one_register_frontpage_metabox() {
         // 'repeatable' => true,
     ) );*/
 
+>>>>>>> staging
     $cmb_demo->add_field( array(
         'name' => __( 'Block two: Top Title', 'cmb2' ),
         'desc' => __( 'H1 heading for the second block/section', 'cmb2' ),
@@ -132,14 +135,14 @@ function one_register_frontpage_metabox() {
         // 'repeatable' => true,
     ) );
 
-    $cmb_demo->add_field( array(
+    /*$cmb_demo->add_field( array(
         'name' => __( 'Block two: Bottom Title/Subheading', 'cmb2' ),
         'desc' => __( 'Sub Heading title - H2', 'cmb2' ),
         'id'   => $prefix . 'two_bottom',
         'type' => 'text',
         // 'protocols' => array('http', 'https', 'ftp', 'ftps', 'mailto', 'news', 'irc', 'gopher', 'nntp', 'feed', 'telnet'), // Array of allowed protocols
         // 'repeatable' => true,
-    ) );
+    ) );*/
 
     //Originally, we were using an image for the heading, but changed this to be a text field to render a text title.  Leaving this in just in case we go back to an image.
     /*$cmb_demo->add_field( array(
@@ -173,14 +176,14 @@ function one_register_frontpage_metabox() {
         // 'repeatable' => true,
     ) );
 
-    $cmb_demo->add_field( array(
+   /* $cmb_demo->add_field( array(
         'name' => __( 'Block three: Bottom Title/Subheading', 'cmb2' ),
         'desc' => __( 'Sub Heading title - H2', 'cmb2' ),
         'id'   => $prefix . 'three_bottom',
         'type' => 'text',
         // 'protocols' => array('http', 'https', 'ftp', 'ftps', 'mailto', 'news', 'irc', 'gopher', 'nntp', 'feed', 'telnet'), // Array of allowed protocols
         // 'repeatable' => true,
-    ) );
+    ) ); */
 
     $cmb_demo->add_field( array(
         'name' => __( 'Block three: Image', 'cmb2' ),
@@ -207,14 +210,14 @@ function one_register_frontpage_metabox() {
         // 'repeatable' => true,
     ) );
 
-    $cmb_demo->add_field( array(
+    /* $cmb_demo->add_field( array(
         'name' => __( 'Block four: Bottom Title', 'cmb2' ),
         'desc' => __( 'field description (optional)', 'cmb2' ),
         'id'   => $prefix . 'four_bottom',
         'type' => 'text',
         // 'protocols' => array('http', 'https', 'ftp', 'ftps', 'mailto', 'news', 'irc', 'gopher', 'nntp', 'feed', 'telnet'), // Array of allowed protocols
         // 'repeatable' => true,
-    ) );
+    ) ); */
 
     $cmb_demo->add_field( array(
         'name' => __( 'Block four: Image', 'cmb2' ),
@@ -265,7 +268,7 @@ function one_register_frontpage_metabox() {
         'default' => 'boxed',
     ) );
 
-    $cmb_demo->add_field( array(
+    /* $cmb_demo->add_field( array(
         'name' => __( 'Gallery Data Title Attribute', 'cmb2' ),
         'desc' => __( 'This is the word that shows up in the middle title block container when a user is in this section.', 'cmb2' ),
         'id'   => $prefix . 'gallery_title',
@@ -273,7 +276,7 @@ function one_register_frontpage_metabox() {
         'after'   => '<div style="padding:10px 0;">All of the other section pull from the Title that gets entered above the description, but this section is slightly different.  So, you can change this from team to passion, etc.</div>',
         // 'protocols' => array('http', 'https', 'ftp', 'ftps', 'mailto', 'news', 'irc', 'gopher', 'nntp', 'feed', 'telnet'), // Array of allowed protocols
         // 'repeatable' => true,
-    ) );
+    ) ); */
 
     // _team layout toggle
     $cmb_demo->add_field( array(
@@ -315,14 +318,14 @@ function one_register_frontpage_metabox() {
         // 'repeatable' => true,
     ) );
 
-    $cmb_demo->add_field( array(
+   /* $cmb_demo->add_field( array(
         'name' => __( 'Block five: Bottom Title', 'cmb2' ),
         'desc' => __( 'field description (optional)', 'cmb2' ),
         'id'   => $prefix . 'five_bottom',
         'type' => 'text',
         // 'protocols' => array('http', 'https', 'ftp', 'ftps', 'mailto', 'news', 'irc', 'gopher', 'nntp', 'feed', 'telnet'), // Array of allowed protocols
         // 'repeatable' => true,
-    ) );
+    ) ); */
 
     $cmb_demo->add_field( array(
         'name' => __( 'Block five: Image', 'cmb2' ),
@@ -340,8 +343,42 @@ function one_register_frontpage_metabox() {
     ) );
 
 
-    // What's in a name custom fields
+    // New What's in a name custom fields - New as of Oct-2018 -
+    // These use the 3-4 paragraphs of text with the plumb bob, Navigate the stars, Eiffel Tower...
 
+    $cmb_demo->add_field( array(
+        'name'    => __( 'Whats in a name Paragraph 1', 'cmb2' ),
+        'desc'    => __( '', 'cmb2' ),
+        'id'      => $prefix . 'name_paragraph_one',
+        'type'    => 'wysiwyg',
+        'options' => array( 'textarea_rows' => 2, ),
+    ) );
+    $cmb_demo->add_field( array(
+        'name'    => __( 'Whats in a name Paragraph 2', 'cmb2' ),
+        'desc'    => __( '', 'cmb2' ),
+        'id'      => $prefix . 'name_paragraph_two',
+        'type'    => 'wysiwyg',
+        'options' => array( 'textarea_rows' => 2, ),
+    ) );
+
+    $cmb_demo->add_field( array(
+        'name'    => __( 'Whats in a name Paragraph 3', 'cmb2' ),
+        'desc'    => __( '', 'cmb2' ),
+        'id'      => $prefix . 'name_paragraph_three',
+        'type'    => 'wysiwyg',
+        'options' => array( 'textarea_rows' => 2, ),
+    ) );
+
+    $cmb_demo->add_field( array(
+        'name'    => __( 'Whats in a name Paragraph 4', 'cmb2' ),
+        'desc'    => __( '', 'cmb2' ),
+        'id'      => $prefix . 'name_paragraph_four',
+        'type'    => 'wysiwyg',
+        'options' => array( 'textarea_rows' => 2, ),
+    ) );
+
+
+    // old What's in a name fields - pre Oct-2018 - these tools used the modal to display a letter/pdf...
     /*$cmb_demo->add_field( array(
         'name' => __( 'Whats in a name: Data Attribute Title', 'cmb2' ),
         'desc' => __( 'This is the name that gets displayed in Middle Title Block container', 'cmb2' ),
@@ -352,7 +389,7 @@ function one_register_frontpage_metabox() {
     ) );*/
 
     // _one_front_name_radio_toggle
-    $cmb_demo->add_field( array(
+   /* $cmb_demo->add_field( array(
         'name'    => 'This Radio button determines which method to use within the pop-up modal',
         'id'      => 'name_radio_toggle',
         'type'    => 'radio_inline',
@@ -420,11 +457,11 @@ function one_register_frontpage_metabox() {
         'type'    => 'wysiwyg',
         'options' => array( 'textarea_rows' => 2, ),
         'after' => 'If this text option is chosen, make sure to enable this option above.',
-    ) );
+    ) ); */
 
     //Block Six/"Bookend" section
 
-    $cmb_demo->add_field( array(
+   /*  $cmb_demo->add_field( array(
         'name' => __( 'Block Six: Top Title', 'cmb2' ),
         'desc' => __( 'field description (optional)', 'cmb2' ),
         'id'   => $prefix . 'six_top',
@@ -439,7 +476,7 @@ function one_register_frontpage_metabox() {
         'id'   => $prefix . 'six_image',
         'type' => 'file',
         'before_row'   => '<div style="text-align:center;padding:30px 0;"><b>This final section does not use a top and bottom title.  This section was designed to be the bottom "bookend" with call to action text and footer info.</b></div>',
-    ) );
+    ) ); */
 
     /*$cmb_demo->add_field( array(
         'name'    => __( 'Six wysiwyg', 'cmb2' ),
@@ -449,7 +486,7 @@ function one_register_frontpage_metabox() {
         'options' => array( 'textarea_rows' => 2, ),
     ) );*/
 
-    $cmb_demo->add_field( array(
+   /* $cmb_demo->add_field( array(
         'name'    => __( 'Bookend/CTA Title One (ex: Why)', 'cmb2' ),
         'desc'    => __( '', 'cmb2' ),
         'id'      => $prefix . 'six_why_title',
@@ -500,6 +537,6 @@ function one_register_frontpage_metabox() {
         'desc'    => __( 'This can be a url to a page, a modal, a file or an external url', 'cmb2' ),
         'id'      => $prefix . 'cta_url',
         'type'    => 'text_url',
-    ) );
+    ) ); */
 
 }
