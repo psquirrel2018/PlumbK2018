@@ -97,8 +97,6 @@ function one_register_frontpage_metabox() {
         // 'repeatable' => true,
     ) );
 
-<<<<<<< HEAD
-=======
     $cmb_demo->add_field( array(
         'name' => __( 'Block One: Sub-Heading Title', 'cmb2' ),
         'desc' => __( 'This is a sub heading that goes just below the Top Title.  This is an H2.', 'cmb2' ),
@@ -125,7 +123,6 @@ function one_register_frontpage_metabox() {
         // 'repeatable' => true,
     ) );*/
 
->>>>>>> staging
     $cmb_demo->add_field( array(
         'name' => __( 'Block two: Top Title', 'cmb2' ),
         'desc' => __( 'H1 heading for the second block/section', 'cmb2' ),
