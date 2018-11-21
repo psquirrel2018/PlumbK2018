@@ -12,7 +12,7 @@ $topTitleOne = get_post_meta($post->ID, '_one_front_one_top', true);
 
 ?>
 <section id="passion" class="row" data-title="<?= $topTitleOne; ?>">
-<div id="flick-container" class="col-md-9 flickity">
+<div id="flick-container" class="col-xs-12 flickity">
     <div id="flick" style="max-height:600px;max-width:100%;" class="main-carousel">
             <?php
             $homepageSlider2 = get_post_meta( $homepageSlider, '_multi_slides_group_', true );
@@ -40,7 +40,4 @@ $topTitleOne = get_post_meta($post->ID, '_one_front_one_top', true);
         </nav>
     </div>
 </div>
-    <div class="col-md-3" style="padding:60px;">
-        <img src="/wp-content/uploads/2018/11/G.52.sm_.png" class="img-responsive" style="max-height:236px;margin:auto;">
-    </div>
 </section>

@@ -342,6 +342,26 @@ function one_register_frontpage_metabox() {
 
     // New What's in a name custom fields - New as of Oct-2018 -
     // These use the 3-4 paragraphs of text with the plumb bob, Navigate the stars, Eiffel Tower...
+    $cmb_demo->add_field( array(
+        'name'    => __( 'Whats in a name Plumb Bob image', 'cmb2' ),
+        'desc' => __( 'Upload an image or enter a URL.', 'cmb2' ),
+        'id'   => $prefix . 'name_plumb_bob',
+        'type' => 'file',
+    ) );
+
+    $cmb_demo->add_field( array(
+        'name'    => __( 'Whats in a name Contact image', 'cmb2' ),
+        'desc' => __( 'Upload an image or enter a URL.', 'cmb2' ),
+        'id'   => $prefix . 'name_contact_image',
+        'type' => 'file',
+    ) );
+
+    $cmb_demo->add_field( array(
+        'name'    => __( 'Whats in a name Signature image', 'cmb2' ),
+        'desc' => __( 'Upload an image or enter a URL.', 'cmb2' ),
+        'id'   => $prefix . 'name_signature_image',
+        'type' => 'file',
+    ) );
 
     $cmb_demo->add_field( array(
         'name'    => __( 'Whats in a name Paragraph 1', 'cmb2' ),
