@@ -24,6 +24,11 @@ function cws_multitheme_register_required_plugins() {
             'slug'      => 'cmb2',
             'required'  => true,
         ),
+        array(
+            'name'      => 'CMB2 Typography',
+            'slug'      => 'cmb2-typography-master',
+            'required'  => true,
+        ),
     );
 
     $config = array(
@@ -93,6 +98,17 @@ function oneConfluence_scripts() {
 }
 
 add_action('wp_enqueue_scripts', 'oneConfluence_scripts');
+
+//FUNCTION TO GET GOOGLE FONTS
+    function setup_google_fonts(){
+        $customFontData = one_get_option('typography');
+         return $customFontData['font-family'];
+    }
+    function setup_custom_font_data(){
+
+        $customFontData = one_get_option('typography');
+        return $customFontData;
+    }
 
 //Creating Custom Post types for the homepage slider
 function setup_slides_cpt(){
