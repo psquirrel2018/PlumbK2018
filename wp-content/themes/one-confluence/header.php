@@ -28,8 +28,10 @@
 
     $font = setup_google_fonts();
 
-    ?>
-    <link href="https://fonts.googleapis.com/css?family=<?= $font; ?>" rel="stylesheet">
+    if (!empty($font)){ ?>
+        <link href="https://fonts.googleapis.com/css?family=<?= $font; ?>" rel="stylesheet">
+    <?php }  ?>
+
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar" data-offset="50" <?php body_class(); ?> >
     <section id="purpose" data-title="Purpose" style="background-color: <?= $header_bg_color; ?>">
