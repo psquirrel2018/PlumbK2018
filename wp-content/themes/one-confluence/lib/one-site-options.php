@@ -334,7 +334,7 @@ class one_Admin {
                     'font-size' => true,
                     'font-weight' => true,
                     'color' => true,
-                    //'background' => true,
+                    'background' => true,
                     'text-align' => true,
                     'text-transform' => true,
                     'line-height' => true,
