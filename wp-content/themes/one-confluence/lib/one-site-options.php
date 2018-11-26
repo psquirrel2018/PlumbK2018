@@ -326,7 +326,7 @@ class one_Admin {
 
         $cmb->add_field( array(
             'name' => __( 'Font Picker', 'one' ),
-            'desc' => __( 'This is a spare field for a url such as LinkedIn or Houzz...', 'one' ),
+            'desc' => __( 'Select the font and styles you want to use here.', 'one' ),
             'id'   => 'typography',
             'type' => 'typography',
             'fields' => array (
@@ -334,7 +334,7 @@ class one_Admin {
                     'font-size' => true,
                     'font-weight' => true,
                     'color' => true,
-                    'background' => true,
+                    //'background' => true,
                     'text-align' => true,
                     'text-transform' => true,
                     'line-height' => true,
