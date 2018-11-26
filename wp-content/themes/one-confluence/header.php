@@ -17,13 +17,19 @@
     <?php wp_head();
 
     $site_logo='';
-    $header_bg_color='abc';
+    $header_bg_color='';
 
     if (function_exists('one_get_option')) {
         $site_logo = one_get_option('logo');
         $header_bg_color = one_get_option('header_bg_color');
     }
+
+    setup_google_fonts();
+
+    $font = setup_google_fonts();
+
     ?>
+    <link href="https://fonts.googleapis.com/css?family=<?= $font; ?>" rel="stylesheet">
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar" data-offset="50" <?php body_class(); ?> >
     <section id="purpose" data-title="Purpose" style="background-color: <?= $header_bg_color; ?>">

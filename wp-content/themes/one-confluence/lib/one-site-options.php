@@ -287,6 +287,31 @@ class one_Admin {
             'after_row' => '<p style="padding-bottom:15px;">If you can find your icon at <a href="http://fontawesome.io/icons/" target="_blank">http://fontawesome.io/icons/</a> then copy the icon code here.  The icon code will look like: fa fa-bandcamp</p>'
         ) );
 
+       /* $cmb->add_field( array(
+            'name' => __( 'Font Source URL for the Welcome Quote/Intro Message', 'one' ),
+            'desc' => __( 'This should be a url from Google Fonts, Font Squirrel...', 'one' ),
+            'id'   => 'one_quote_font_url',
+            'type' => 'text_url',
+        ) );
+
+        $cmb->add_field( array(
+            'name' => __( 'Font Name', 'one' ),
+            'desc' => __( 'Must be spelled correctly', 'one' ),
+            'id'   => 'one_font_name',
+            'type' => 'text',
+        ) );
+
+        $cmb->add_field( array(
+            'name' => __( 'Font Weight', 'one' ),
+            'desc' => __( 'Just one weight, but should be a number such as 300, 400, 500, 600 - 900', 'one' ),
+            'id'   => 'one_font_weight',
+            'type' => 'text',
+        ) );*/
+
+
+
+
+
         $cmb->add_field( array(
             'name'    => 'Header Background Color Picker',
             'id'      => 'header_bg_color',
@@ -297,6 +322,23 @@ class one_Admin {
             'after_row'  => '<p>Quoting Ben Parker, aka. Uncle Ben from Spider-Man, "with great power comes great responsibility".  The purpose of adding this quote, is to remind you the user, 
                             that although you have been given the power to change all sorts of things in this theme, just remember, that you can also make a mess, so proceed with caution.</p>
                             <p>Enjoy this theme. - ST</p>',
+        ) );
+
+        $cmb->add_field( array(
+            'name' => __( 'Font Picker', 'one' ),
+            'desc' => __( 'This is a spare field for a url such as LinkedIn or Houzz...', 'one' ),
+            'id'   => 'typography',
+            'type' => 'typography',
+            'fields' => array (
+                    'font-family' => true,
+                    'font-size' => true,
+                    'font-weight' => true,
+                    'color' => true,
+                    'background' => true,
+                    'text-align' => true,
+                    'text-transform' => true,
+                    'line-height' => true,
+            )
         ) );
 
         //These footer widgets are no longer being used.  Keeping them here in case we go back to them.
