@@ -155,6 +155,7 @@ function oneConfluence_setup() {
             'frontpage-menu' => __('Front Page Menu', 'one-confluence'),
             'frontpage-right-menu' => __('Front Page Right Menu', 'one-confluence'),
             'frontpage-mobile-menu' => __('Mobile Menu', 'one-confluence'),
+            'blog-page-menu' => __('Blog and Post Menu', 'one-confluence'),
         )
     );
 }
@@ -165,6 +166,18 @@ function one_front_nav() {
     if (function_exists('wp_nav_menu'))
         wp_nav_menu(array(
             'theme_location' => 'frontpage-menu',
+            'menu_class' => 'nav navbar-nav navbar-left',
+            'menu_id' => 'one_menu',
+            'container' => '',
+            'container_class' => '',
+            //'fallback_cb' => 'one_front_nav_fallback',  Removed fallback because we changed directions so many times and this is so specific that I don't see there ever being a fallback
+            'walker' => new wp_bootstrap_navwalker()));
+}
+
+function one_front_nav_two() {
+    if (function_exists('wp_nav_menu'))
+        wp_nav_menu(array(
+            'theme_location' => 'blog-page-menu',
             'menu_class' => 'nav navbar-nav navbar-left',
             'menu_id' => 'one_menu',
             'container' => '',
