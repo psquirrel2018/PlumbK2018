@@ -27,7 +27,7 @@ $images = get_field('gallery');
         <?php while ( have_posts() ) : the_post(); ?>
 
 
-        <div class="container" style="display:block; position:relative;">
+        <div class="container blog-content">
                 <div class="row">
                     <?php if (empty($images)) { ?>
                         <div class="col-xs-12 section-title-wrapper" style="padding:15px;">
