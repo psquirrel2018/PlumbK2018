@@ -15,9 +15,9 @@ $imageUrl = wp_get_attachment_url( get_post_thumbnail_id() );
 ?>
     <div id="main-container" class="container-fluid">
 
-        <div class="fullwidthbanner-container container">
+        <div class="fullwidthbanner-container container blog-hero">
             <div class="row">
-                <div class="col-xs-12 hero-container">
+                <div class="col-xs-12 hero-container" style="">
                     <img class="img-responsive" src="<?= $imageUrl; ?>" style="width:100%;">
                 </div>
             </div>
@@ -25,8 +25,7 @@ $imageUrl = wp_get_attachment_url( get_post_thumbnail_id() );
 
         <?php while ( have_posts() ) : the_post(); ?>
 
-        <div class="container">
-            <div class="limit-width3">
+        <div class="container" style="display:block; position:relative;">
                 <div class="row">
                     <div class="col-xs-12 col-sm-8 section-title-wrapper" style="padding:15px;">
                         <h1 class="light-version"><?= the_title(); ?></h1>
@@ -56,11 +55,10 @@ $imageUrl = wp_get_attachment_url( get_post_thumbnail_id() );
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
         <?php endwhile;
         get_template_part('templates/blog-title-block-section');
-        get_template_part('templates/footer-block');
+        get_template_part('templates/footer-block-post');
         ?>
     </div>
 <?php get_footer(); ?>
