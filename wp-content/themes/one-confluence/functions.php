@@ -86,6 +86,7 @@ function oneConfluence_scripts() {
     wp_enqueue_script( 'grayscale', get_template_directory_uri() . '/js/jquery.gray.min.js');
     wp_enqueue_script('mfp', get_template_directory_uri() . '/js/jquery.magnific-popup.js', array('jquery'), '1.0.0', true );
     wp_enqueue_script('flickity', get_template_directory_uri() . '/js/flickity.pkgd.min.js', array('jquery'), '1.0.0', true );
+    wp_enqueue_script('isotope', get_template_directory_uri() . '/js/isotope.pkgd.min.js', array('jquery','imagesloaded'), '1.0.0', true );
     wp_enqueue_script('settings', get_template_directory_uri() . '/js/custom.js', array('jquery'), '', true);
 
      /** Easing javascript file **/
@@ -109,6 +110,23 @@ add_action('wp_enqueue_scripts', 'oneConfluence_scripts');
         $customFontData = one_get_option('typography');
         return $customFontData;
     }
+
+function one_confluence_get_wysiwyg_output( $meta_key, $post_id = 2 ) {
+    global $wp_embed;
+
+    $post_id = $post_id ? $post_id : get_the_id();
+
+    $content = get_post_meta( $post_id, $meta_key, 1 );
+    $content = $wp_embed->autoembed( $content );
+    $content = $wp_embed->run_shortcode( $content );
+    //$content = wpautop( $content );
+    $content = do_shortcode( $content );
+
+    return $content;
+};
+
+
+
 
 //Creating Custom Post types for the homepage slider
 function setup_slides_cpt(){
@@ -147,6 +165,7 @@ function oneConfluence_setup() {
     add_theme_support('post-thumbnails');
     add_image_size('post_thumbnail', 600, 250, true);
     add_image_size('post_thumbnail_1', 70, 70, true);
+    add_image_size( 'gallery-thumb', 186, 318, true );
     add_theme_support('automatic-feed-links');
 
 // Register menus
