@@ -341,6 +341,19 @@ class one_Admin {
             )
         ) );
 
+        $cmb->add_field( array(
+            'name'             => esc_html__( 'Font Style', 'cmb2' ),
+            'desc'             => esc_html__( 'Bold, Italic, Normal', 'cmb2' ),
+            'id'               => 'font-style',
+            'type'             => 'select',
+            'show_option_none' => true,
+            'options'          => array(
+                'normal' => esc_html__( 'Normal', 'cmb2' ),
+                'bold'   => esc_html__( 'Bold', 'cmb2' ),
+                'italic'     => esc_html__( 'Italics', 'cmb2' ),
+            ),
+        ) );
+
         //These footer widgets are no longer being used.  Keeping them here in case we go back to them.
         /*$cmb->add_field( array(
             'name'    => __( 'Left Footer WYSIWYG', 'cmb2' ),

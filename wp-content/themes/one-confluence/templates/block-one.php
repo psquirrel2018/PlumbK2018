@@ -32,12 +32,14 @@ $data = $font;
 list($CustomFont) = explode(":", $data);
 $customFont2 = preg_replace('/[^a-zA-Z0-9-_\.]/',' ', $CustomFont);
 
+$fontStyle = one_get_option('font-style');
+
 ?>
 
 <section id="passion" class="row" data-title="<?= $topTitleOne; ?>">
-    <div class="col-sm-5 col-md-4 col-lg-4 col-lg-push-2 text-overlay-left clearfix" style="padding: 80px 0 80px 80px;">
+    <div class="col-sm-5 col-md-4 col-lg-4 col-lg-push-2 text-overlay-left clearfix" style="padding: 80px 0 80px 70px;">
         <div class="featured-content-left purpose copy"><h2 id="triggerPassion"><?//= $topTitleOne; ?></h2>
-            <div style="font-family:'<?= $customFont2; ?>' !important;font-weight:<?= $weight; ?>;font-size:<?= $size; ?>;color:<?= $color; ?>;font-style: italic;line-height:<?= $lineHeight; ?>">
+            <div style="padding-right:10px;font-family:'<?= $customFont2; ?>' !important;font-weight:<?= $weight; ?>;font-size:<?= $size; ?>;color:<?= $color; ?>;line-height:<?= $lineHeight; ?>;font-style:<?= $fontStyle; ?>;">
                 <?= $descriptionOne; ?>
             </div>
 
