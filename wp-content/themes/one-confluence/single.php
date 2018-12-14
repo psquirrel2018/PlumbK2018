@@ -28,9 +28,32 @@ $imageUrl = wp_get_attachment_url( get_post_thumbnail_id() );
         <div class="container">
             <div class="limit-width3">
                 <div class="row">
-                    <div class="col-xs-12 section-title-wrapper" style="padding:15px;">
+                    <div class="col-xs-12 col-sm-8 section-title-wrapper" style="padding:15px;">
                         <h1 class="light-version"><?= the_title(); ?></h1>
                         <p><?= the_content(); ?></p>
+                    </div>
+                    <div class="col-xs-12 col-sm-4" style="padding:15px;">
+                        <div class="photos_gallery">
+                            <ul style="margin-bottom:60px;">
+                                <?php
+                                $images = get_field('gallery');
+                                if ($images):
+                                    foreach ($images as $image):
+                                        $url = $image['url'];
+                                        $type = $image['type'];
+                                        //$icon = $image['icon'];
+                                        ?>
+                                        <li class="projectGalleryItem">
+                                            <a class="galleryImage" rel="gallery1" href="<?php echo $url; ?>">
+                                                <img src="<?php echo $image['sizes']['gallery-thumb']; ?>" alt="<?php echo basename($image['sizes']['medium']); ?>" />
+                                            </a>
+                                        </li>
+                                    <?php
+                                    endforeach;
+                                endif;
+                                ?>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
