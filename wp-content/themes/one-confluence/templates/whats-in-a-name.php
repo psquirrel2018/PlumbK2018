@@ -63,17 +63,6 @@ $whatsInaNameParagraphFour = get_post_meta($post->ID, '_one_front_name_paragraph
                             </div>
                         </div>
                         <?php if ($whatsInaNameParagraphFour !='') { ?>
-                        <div class="row">
-                            <div class="col-md-1"></div>
-                            <div class="col-md-10 border-left border-left4">
-                                <div id="border4" class="spacer s0"></div>
-                                <div class="paragraph4 scroll-content">
-                                    <?= $whatsInaNameParagraphFour; ?>
-                                </div>
-                            </div>
-                            <div class="col-md-1">
-                            </div>
-                        </div>
                             <div class="row">
                                 <div class="col-xs-1"></div>
                                 <div class="col-xs-10 border-left border-left4">
