@@ -30,6 +30,8 @@
         }
     );
 
+
+
     /* Init Flickity - Homepage slider */
     $('.main-carousel').flickity({
         // options
@@ -51,6 +53,17 @@
         gallery: { enabled:true }
         // other options
     });
+
+    $('.projectGalleryItem').magnificPopup({
+        delegate: 'a', // child items selector, by clicking on it popup will open
+        type: 'image',
+        closeOnContentClick: true,
+        closeBtnInside: false,
+        gallery: { enabled:true }
+        // other options
+    });
+
+
 
     // Carousels
 
@@ -142,311 +155,292 @@
 
     //  Start Waypoint.js triggers.
 
-    var makeHeaderBlockFixedDown = new Waypoint({
+    if(!$('body').hasClass('page-template-blog-post-template-php')) {
 
-            element: document.getElementById('header'),
-            enabled: true, //here is the modified line
+
+        var makeHeaderBlockFixedDown = new Waypoint({
+
+                element: document.getElementById('header'),
+                enabled: true, //here is the modified line
+                handler: function (direction) {
+                    console.log(direction);
+                    if (direction === 'down') {
+                        $('#header').removeClass('unstuck').addClass('stuck');
+                    }
+                    else {
+                        $('#titleblock').css({});
+                    }
+                },
+                offset: '0'
+            }
+        );
+
+        var makeHeaderBlockRelativeUp = new Waypoint({
+
+                element: document.getElementById('purpose'),
+                handler: function (direction) {
+                    console.log(direction);
+                    if (direction === 'up') {
+                        $('#header').removeClass('stuck').addClass('unstuck');
+                    }
+                    else {
+                        $('#titleblock').css('position', 'fixed');
+                    }
+                },
+                offset: '-130'
+            }
+        );
+
+        var changeHeaderClassDown = new Waypoint({
+                element: document.getElementById('purpose-bottom'),
+                handler: function (direction) {
+                    console.log(direction);
+                    if (direction === 'down') {
+                        $('#pnav').addClass('white-bg');
+                    }
+                    else {
+                        $('#titleblock').css({});
+                    }
+                },
+                offset: 'bottom-in-view'
+            }
+        );
+
+        var fixTitleblockUp = new Waypoint({
+
+                element: document.getElementById('solutions'),
+                handler: function (direction) {
+                    console.log(direction);
+                    if (direction === 'up') {
+                        $('#titleblock').css({
+                            'position': 'fixed',
+
+                        });
+                    }
+                    else {
+                        $('#titleblock').css('position', 'relative');
+                    }
+                },
+                offset: 'bottom-in-view'
+            }
+        );
+
+        var passionWaypointDown = new Waypoint({
+
+                element: document.getElementById('passion'),
+                handler: function (direction) {
+                    if (direction === 'down') {
+                        $('.js-tag').html($('#passion').data('title'));
+                    }
+                },
+                offset: '0'
+            }
+        );
+
+        var passionWaypointUp = new Waypoint({
+
+                element: document.getElementById('passion'),
+                handler: function (direction) {
+                    if (direction === 'up') {
+                        $('.js-tag').html($('#passion').data('title'));
+                    }
+                },
+                offset: '200'
+            }
+        );
+
+        /*var waypoint = new Waypoint({
+                offset: (   ( $(window).height() / 2 ) - ( $('#art').height() / 2 )   ),
+                element: document.getElementById('art'),
+                handler: function(direction) {
+                        $('.js-tag').html($('#art').data('title'));
+                    }
+            });*/
+
+        var waypointArtDown = new Waypoint({
+
+                element: document.getElementById('art'),
+                handler: function (direction) {
+                    if (direction === 'down') {
+                        $('.js-tag').html($('#art').data('title'));
+                    }
+                },
+                offset: '200'
+            }
+        );
+
+        var waypointUp = new Waypoint({
+
+                element: document.getElementById('art'),
+                handler: function (direction) {
+                    if (direction === 'up') {
+                        $('.js-tag').html($('#art').data('title'));
+                    }
+                },
+                offset: '5%'
+            }
+        );
+
+        /*var scienceWaypoint = new Waypoint({
+            offset: $(window).height()/4,
+            element: document.getElementById('science'),
             handler: function(direction) {
-                console.log(direction);
-                if (direction === 'down') {
-                    $('#header').removeClass('unstuck').addClass('stuck');
-                }
-                else {
-                    $('#titleblock').css({
-
-                    });
-                }
-            },
-            offset: '0'
-        }
-    );
-
-    var makeHeaderBlockRelativeUp = new Waypoint({
-
-            element: document.getElementById('purpose'),
-            handler: function(direction) {
-                console.log(direction);
-                if (direction === 'up') {
-                    $('#header').removeClass('stuck').addClass('unstuck');
-                }
-                else {
-                    $('#titleblock').css('position','fixed');
-                }
-            },
-            offset: '-130'
-        }
-    );
-
-    var changeHeaderClassDown = new Waypoint({
-            element: document.getElementById('purpose-bottom'),
-            handler: function(direction) {
-                console.log(direction);
-                if (direction === 'down') {
-                    $('#pnav').addClass('white-bg');
-                }
-                else {
-                    $('#titleblock').css({
-
-                    });
-                }
-            },
-            offset: 'bottom-in-view'
-        }
-    );
-
-     var fixTitleblockUp = new Waypoint({
-
-            element: document.getElementById('solutions'),
-            handler: function(direction) {
-                console.log(direction);
-                if (direction === 'up') {
-                    $('#titleblock').css({
-                        'position':'fixed',
-
-                    });
-                }
-                else {
-                    $('#titleblock').css('position','relative');
-                }
-            },
-            offset: 'bottom-in-view'
-        }
-    );
-
-    var passionWaypointDown = new Waypoint({
-
-            element: document.getElementById('passion'),
-            handler: function(direction) {
-                if (direction === 'down') {
-                    $('.js-tag').html($('#passion').data('title'));
-                }
-            },
-            offset: '0'
-        }
-    );
-
-    var passionWaypointUp = new Waypoint({
-
-            element: document.getElementById('passion'),
-            handler: function(direction) {
-                if (direction === 'up') {
-                    $('.js-tag').html($('#passion').data('title'));
-                }
-            },
-            offset: '200'
-        }
-    );
-
-    /*var waypoint = new Waypoint({
-            offset: (   ( $(window).height() / 2 ) - ( $('#art').height() / 2 )   ),
-            element: document.getElementById('art'),
-            handler: function(direction) {
-                    $('.js-tag').html($('#art').data('title'));
-                }
+                $('.js-tag').html($('#science').data('title'));
+            }
         });*/
 
-    var waypointArtDown = new Waypoint({
+        var waypointScienceDown = new Waypoint({
 
-            element: document.getElementById('art'),
-            handler: function(direction) {
-                if (direction === 'down') {
-                    $('.js-tag').html($('#art').data('title'));
-                }
-            },
-            offset: '200'
-        }
-    );
+                element: document.getElementById('science'),
+                handler: function (direction) {
+                    if (direction === 'down') {
+                        $('.js-tag').html($('#science').data('title'));
+                    }
+                },
+                offset: '50%'
+            }
+        );
 
-    var waypointUp = new Waypoint({
+        var scienceWaypointUp = new Waypoint({
+                element: document.getElementById('science'),
+                handler: function (direction) {
+                    if (direction === 'up') {
+                        $('.js-tag').html($('#science').data('title'));
+                    }
+                },
+                offset: '5%'
+            }
+        );
 
-            element: document.getElementById('art'),
-            handler: function(direction) {
-                if (direction === 'up') {
-                    $('.js-tag').html($('#art').data('title'));
-                }
-            },
-            offset: '5%'
-        }
-    );
-
-    /*var scienceWaypoint = new Waypoint({
-        offset: $(window).height()/4,
-        element: document.getElementById('science'),
-        handler: function(direction) {
-            $('.js-tag').html($('#science').data('title'));
-        }
-    });*/
-
-    var waypointScienceDown = new Waypoint({
-
-            element: document.getElementById('science'),
-            handler: function(direction) {
-                if (direction === 'down') {
-                    $('.js-tag').html($('#science').data('title'));
-                }
-            },
-            offset: '50%'
-        }
-    );
-
-    var scienceWaypointUp = new Waypoint({
-            element: document.getElementById('science'),
-            handler: function(direction) {
-                if (direction === 'up') {
-                    $('.js-tag').html($('#science').data('title'));
-                }
-            },
-            offset: '5%'
-        }
-    );
-
-    var creativeWaypoint = new Waypoint({
-        offset: $(window).height()/2,
-        element: document.getElementById('creative'),
-        handler: function(direction) {
-            $('.js-tag').html($('#creative').data('title'));
-        }
-    });
-
-    var creativeWaypointUp = new Waypoint({
+        var creativeWaypoint = new Waypoint({
+            offset: $(window).height() / 2,
             element: document.getElementById('creative'),
-            handler: function(direction) {
-                if (direction === 'up') {
-                    $('.js-tag').html($('#creative').data('title'));
-                }
-            },
-            offset: '5%'
-        }
-    );
+            handler: function (direction) {
+                $('.js-tag').html($('#creative').data('title'));
+            }
+        });
 
-    var teamWaypoint = new Waypoint({
-        offset: $(window).height()/2,
-        element: document.getElementById('team'),
-        handler: function(direction) {
-            $('.js-tag').html($('#team').data('title'));
-        }
-    });
+        var creativeWaypointUp = new Waypoint({
+                element: document.getElementById('creative'),
+                handler: function (direction) {
+                    if (direction === 'up') {
+                        $('.js-tag').html($('#creative').data('title'));
+                    }
+                },
+                offset: '5%'
+            }
+        );
 
-    var teamWaypointUp = new Waypoint({
+        var teamWaypoint = new Waypoint({
+            offset: $(window).height() / 2,
             element: document.getElementById('team'),
-            handler: function(direction) {
-                if (direction === 'up') {
-                    $('.js-tag').html($('#team').data('title'));
-                }
-            },
-            offset: '5%'
-        }
-    );
+            handler: function (direction) {
+                $('.js-tag').html($('#team').data('title'));
+            }
+        });
 
-    var solutionsWaypoint = new Waypoint({
-        offset: $(window).height()/2,
-        element: document.getElementById('solutions'),
-        handler: function(direction) {
-            $('.js-tag').html($('#solutions').data('title'));
-        }
-    });
+        var teamWaypointUp = new Waypoint({
+                element: document.getElementById('team'),
+                handler: function (direction) {
+                    if (direction === 'up') {
+                        $('.js-tag').html($('#team').data('title'));
+                    }
+                },
+                offset: '5%'
+            }
+        );
 
-    var solutionsWaypointUp = new Waypoint({
-            element: document.getElementById('team'),
-            handler: function(direction) {
-                if (direction === 'up') {
-                    $('.js-tag').html($('#team').data('title'));
-                }
-            },
-            offset: '5%'
-        }
-    );
-
-    var purposeWaypoint = new Waypoint({
-        //offset: $(window).height()/2,
-        element: document.getElementById('purpose'),
-        handler: function(direction) {
-            $('.js-tag').html($('#purpose').data('title'));
-        },
-        offset: 'bottom-in-view'
-    });
-
-    var purposeWaypointUp = new Waypoint({
+        var solutionsWaypoint = new Waypoint({
+            offset: $(window).height() / 2,
             element: document.getElementById('solutions'),
-            handler: function(direction) {
-                if (direction === 'up') {
-                    $('.js-tag').html($('#solutions').data('title'));
-                }
-            },
-            offset: '5%'
-        }
-    );
+            handler: function (direction) {
+                $('.js-tag').html($('#solutions').data('title'));
+            }
+        });
 
-    /*var waypointContactDown = new Waypoint({
-            element: document.getElementById('purpose-bottom'),
-            handler: function(direction) {
-                if (direction === 'down') {
-                    $('.dropline').toggleClass('current');
-                }
+        var solutionsWaypointUp = new Waypoint({
+                element: document.getElementById('team'),
+                handler: function (direction) {
+                    if (direction === 'up') {
+                        $('.js-tag').html($('#team').data('title'));
+                    }
+                },
+                offset: '5%'
+            }
+        );
+
+        var purposeWaypoint = new Waypoint({
+            //offset: $(window).height()/2,
+            element: document.getElementById('purpose'),
+            handler: function (direction) {
+                $('.js-tag').html($('#purpose').data('title'));
             },
             offset: 'bottom-in-view'
-        }
-    );*/
+        });
+
+        var purposeWaypointUp = new Waypoint({
+                element: document.getElementById('solutions'),
+                handler: function (direction) {
+                    if (direction === 'up') {
+                        $('.js-tag').html($('#solutions').data('title'));
+                    }
+                },
+                offset: '5%'
+            }
+        );
+
+        jQuery(function(){
+
+            // passing options
+
+            var controller = new ScrollMagic.Controller({loglevel: 3});
+
+            // art image
+            var artTrigger = new ScrollMagic.Scene({
+                triggerElement:'#triggerArt',
+                duration: 200
+            })
+                .setTween(".desaturate", 0.5, {filter:'grayscale(0)'}) // trigger a TweenMax.to tween
+                //.addIndicators({name: "art (duration: 0)"}) // add indicators (requires plugin)
+                .addTo(controller);
+
+            var artTrigger = new ScrollMagic.Scene({
+                triggerElement:'#triggerScience',
+                duration: 150
+            })
+                .setTween(".desaturate2", 0.5, {filter:'grayscale(0)'}) // trigger a TweenMax.to tween
+                //.addIndicators({name: "science (duration: 0)"}) // add indicators (requires plugin)
+                .addTo(controller);
+
+            var artTrigger = new ScrollMagic.Scene({
+                triggerElement:'#triggerCreative',
+                duration: 150
+            })
+                .setTween(".desaturate3", 0.5, {filter:'grayscale(0)'}) // trigger a TweenMax.to tween
+                //.addIndicators({name: "creative (duration: 0)"}) // add indicators (requires plugin)
+                .addTo(controller);
+
+            var artTrigger = new ScrollMagic.Scene({
+                triggerElement:'#triggerSolutions',
+                duration: 100
+            })
+                .setTween(".desaturate4", 0.5, {filter:'grayscale(0)'}) // trigger a TweenMax.to tween
+                //.addIndicators({name: "solutions (duration: 0)"}) // add indicators (requires plugin)
+                .addTo(controller);
+
+            //triggerElement
+            var headerAnimation = new ScrollMagic.Scene({
+                triggerElement:'#trigger-header',
+                duration: 20
+            })
+            //add tween
+                .setTween(".wian-header", 0.5, {opacity:'1.0'}) // trigger a TweenMax.to tween
+                //.addIndicators({name: "header (duration: 0)"}) // add indicators (requires plugin)
+                .addTo(controller);
+
+        });
+    }
 
 }(jQuery, window, ScrollReveal));
-
-jQuery(function(){
-    //objects are always in curly brackets
-    //var controller = new ScrollMagic.Controller({
-    //    container:'body',
-    //   addIndicators:true
-    //});
-
-    // passing options
-
-    var controller = new ScrollMagic.Controller({loglevel: 3});
-
-    // art image
-    var artTrigger = new ScrollMagic.Scene({
-        triggerElement:'#triggerArt',
-        duration: 200
-    })
-        .setTween(".desaturate", 0.5, {filter:'grayscale(0)'}) // trigger a TweenMax.to tween
-        //.addIndicators({name: "art (duration: 0)"}) // add indicators (requires plugin)
-        .addTo(controller);
-
-    var artTrigger = new ScrollMagic.Scene({
-        triggerElement:'#triggerScience',
-        duration: 150
-    })
-        .setTween(".desaturate2", 0.5, {filter:'grayscale(0)'}) // trigger a TweenMax.to tween
-        //.addIndicators({name: "science (duration: 0)"}) // add indicators (requires plugin)
-        .addTo(controller);
-
-    var artTrigger = new ScrollMagic.Scene({
-        triggerElement:'#triggerCreative',
-        duration: 150
-    })
-        .setTween(".desaturate3", 0.5, {filter:'grayscale(0)'}) // trigger a TweenMax.to tween
-        //.addIndicators({name: "creative (duration: 0)"}) // add indicators (requires plugin)
-        .addTo(controller);
-
-    var artTrigger = new ScrollMagic.Scene({
-        triggerElement:'#triggerSolutions',
-        duration: 100
-    })
-        .setTween(".desaturate4", 0.5, {filter:'grayscale(0)'}) // trigger a TweenMax.to tween
-        //.addIndicators({name: "solutions (duration: 0)"}) // add indicators (requires plugin)
-        .addTo(controller);
-
-    //triggerElement
-    var headerAnimation = new ScrollMagic.Scene({
-        triggerElement:'#trigger-header',
-        duration: 20
-    })
-    //add tween
-        .setTween(".wian-header", 0.5, {opacity:'1.0'}) // trigger a TweenMax.to tween
-        //.addIndicators({name: "header (duration: 0)"}) // add indicators (requires plugin)
-        .addTo(controller);
-
-    //NOTE: more waypoints, triggers, and tweens... in /old/Scrollmagic-triggers-tweens.js  Keeping just in case the project shifts back to previous
-    // version or needs additional js...
-
-});
 
 

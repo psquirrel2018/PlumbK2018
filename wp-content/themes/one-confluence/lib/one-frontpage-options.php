@@ -107,6 +107,29 @@ function one_register_frontpage_metabox() {
     ) );
 
     $cmb_demo->add_field( array(
+        'name' => __( 'Seven Step Button: Image', 'cmb2' ),
+        'desc' => __( 'Upload an image or enter a URL.', 'cmb2' ),
+        'id'   => $prefix . 'seven_step_button',
+        'type' => 'file',
+    ) );
+
+    $cmb_demo->add_field( array(
+        'name' => __( 'Seven Step File URL', 'cmb2' ),
+        'desc' => __( 'field description (optional)', 'cmb2' ),
+        'id'   => $prefix . 'seven_step_url',
+        'type' => 'text_url',
+        // 'protocols' => array('http', 'https', 'ftp', 'ftps', 'mailto', 'news', 'irc', 'gopher', 'nntp', 'feed', 'telnet'), // Array of allowed protocols
+        // 'repeatable' => true,
+    ) );
+    $cmb_demo->add_field( array(
+        'name'    => __( 'Seven Step Content', 'cmb2' ),
+        'desc'    => __( 'This is where you enter the form shortcode or other content you want to display for the Seven Step Prcess.', 'cmb2' ),
+        'id'      => $prefix . 'seven_step_wysiwyg',
+        'type'    => 'wysiwyg',
+        'options' => array( 'textarea_rows' => 2, ),
+    ) );
+
+    $cmb_demo->add_field( array(
         'name'    => __( 'One wysiwyg', 'cmb2' ),
         'desc'    => __( 'This is where you would put SEO rich welcome content.', 'cmb2' ),
         'id'      => $prefix . 'one_wysiwyg',

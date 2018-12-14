@@ -38,7 +38,7 @@
     <div class="container purpose">
         <div class="row">
             <div class="col-xs-6 col-xs-push-3 col-sm-4 col-sm-push-4">
-                <img src="<?= $site_logo; ?>" class="logo-responsive" />
+                <a href="/"><img src="<?= $site_logo; ?>" class="logo-responsive" /></a>
             </div>
         </div>
 
@@ -49,8 +49,7 @@
     <div class="header-container container">
         <!-- Navigation -->
         <nav id="pnav" class="navbar navbar-default navbar-left main-menu" role="navigation">
-            <a id="home-link" class="hidden-xs" href="#page-top">
-            </a>
+            <a id="home-link" class="hidden-xs" href="/"></a>
             <div id="menu-left" class="menu">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" aria-controls="navbar">
@@ -63,9 +62,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <?php
-
                         one_front_nav_two();
-
                     ?>
                 </div><!-- /.navbar-collapse -->
             </div>
