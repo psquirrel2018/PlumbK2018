@@ -43,10 +43,11 @@ $fontStyle = one_get_option('font-style');
                 <?= $descriptionOne; ?>
             </div>
 
-            <div style="font-weight:600;float:right;padding-top:60px;">
-                <?= $topTitleSubHeadingOne; ?>
+            <div class="clearfix" style="font-weight:600;float:;padding:10px 0 20px 0;">
+               -- <?= $topTitleSubHeadingOne; ?>
             </div>
-            <div class="clearfix" style="width:100%;padding-top:30px;margin:60px 0 0;">
+            <div class="" style="font-weight:600;font-size:16px;">Get Our Free 7 Step Remodel Process</div>
+            <div class="clearfix" style="width:100%;padding-top:30px;">
                 <a href="#" class="" style="float:right;" data-toggle="modal" data-target="#sevenStepModal"><img src="<?= $sevenStepCta; ?>" class="img-responsive" style="width:250px;"></a>
             </div>
         </div>
