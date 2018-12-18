@@ -209,7 +209,7 @@ function one_right_nav() {
     if (function_exists('wp_nav_menu'))
         wp_nav_menu(array(
             'theme_location' => 'frontpage-right-menu',
-            'menu_class' => 'nav navbar-nav navbar-right dropline',
+            'menu_class' => 'nav navbar-nav navbar-right dropline2',
             'menu_id' => 'one_menu2',
             'container' => '',
             'container_class' => '',

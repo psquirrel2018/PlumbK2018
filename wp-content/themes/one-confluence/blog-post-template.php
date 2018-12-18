@@ -38,7 +38,7 @@ $imageUrl = wp_get_attachment_url( get_post_thumbnail_id() );
                         $groupTerms[strtolower($allCatsTerm->name)] = $allCatsTerm->term_id;
                     } ?>
                     <div class="row" style="padding:30px 0 0 0;">
-                        <div id="portfolio-page" class="col-xs-12">
+                        <div id="portfolio-page" class="col-xs-12" style="border-bottom:1px solid #cccccc;">
                             <ul class="nav navbar-nav navbar-right filter-nav" id="filters" style="">
                                 <?php
                                 $terms2 = get_terms('category');
@@ -81,6 +81,7 @@ $imageUrl = wp_get_attachment_url( get_post_thumbnail_id() );
                             endif;
 
                             $postTitle = get_the_title();
+                            $postDate = get_the_date();
                             $thumb = get_post_thumbnail_id();
                             $img_url = wp_get_attachment_url( $thumb,'medium'); //get img URL
                             $image = aq_resize( $img_url, 450, 310, true ); //resize & crop img
@@ -94,13 +95,13 @@ $imageUrl = wp_get_attachment_url( get_post_thumbnail_id() );
                             }
                             ?>
 
-                            <?php echo '<div class="project col-md-4 all project-item '. implode(' ', $links) .'">';?>
+                            <?php echo '<div class="project col-xs-12 all project-item '. implode(' ', $links) .'">';?>
                             <a href="<?= print get_permalink($post->ID); ?>" class="galleryItem" data-group="<?= implode(', ', $links); ?>" title="<?= $title;?>" data-desc="<?= $descDeets; ?>">
 
-                                        <img src="<?= $image ?>" class="img-responsive">
-                                        <h2 class="project-title"><?= $postTitle; ?></h2>
-                                        <?php echo $excerpt; ?>
-
+                                <h2 class="project-title"><?= $postTitle; ?></h2>
+                                <div clsss="pod-details"><?= $postDate; ?>
+                                </div>
+                                <?php echo $excerpt; ?>
                             </a>
                             <?php echo '</div>' ?>
 
