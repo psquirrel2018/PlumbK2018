@@ -50,7 +50,8 @@ function one_register_frontpage_metabox() {
         'id'            => $prefix . 'metabox',
         'title'         => __( 'Front Page Featured Blocks/Sections', 'cmb2' ),
         'object_types'  => array( 'page', ), // Post type
-        'show_on_cb' => 'show_if_front_page', // function should return a bool value
+        'show_on'      => array( 'key' => 'page-template', 'value' => 'frontpage-v3.php' ),
+        //'show_on_cb' => 'show_if_front_page', // function should return a bool value
         'context'    => 'normal',
         'priority'   => 'high',
         'show_names' => true, // Show field names on the left

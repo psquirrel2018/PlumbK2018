@@ -85,6 +85,8 @@ h6 {font-size: 18px;}
 p{color: #111;font-size:18;font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;font-weight: 400;line-height:26px;}
 a {text-decoration: none;color: #666666;}
 a:hover, a:focus, a:active, a.active {outline: 0; color: #e6343f;}
+.page-template-blog-post-template a:hover, a:focus, a:active, a.selected {outline: 0; color: #e6343f;background-color:#d7d5d5;}
+/*.page-template-blog-post-template .all a:active, a.active {outline: 0; color: #e6343f;background-color:#ffffff;}*/
 nav ul {list-style:none;}
 blockquote, q {quotes:none;}
 blockquote:before, blockquote:after,
@@ -136,6 +138,11 @@ input, select {vertical-align:middle;}
     background-position:right 62.5%;
     height: 68px;
     text-align:right;}
+
+.dropline2 {
+    margin: 20px 0 0 0;
+    border-bottom: 2px solid #595958;
+}
 
 #home-link{display:block; height: 80px;width: 80px; position: absolute; opacity: 0; z-index: 200;}
 #home-link:hover{ cursor:pointer;}
@@ -438,10 +445,6 @@ img.grayscale {
     border:4px solid #ecf0f2;
 }
 
-svg {
-    background:url(http://4.bp.blogspot.com/-IzPWLqY4gJ0/T01CPzNb1KI/AAAAAAAACgA/_8uyj68QhFE/s400/a2cf7051-5952-4b39-aca3-4481976cb242.jpg);
-}
-
 /*img.grayscale:hover {
     filter: none;
     -webkit-filter: grayscale(0%);
@@ -704,10 +707,12 @@ and (max-device-width : 480px) {
 
 }
 
-.project-item {height:520px;padding-top:10px;}
+.project-item {height:auto;padding-top:10px;}
 .blog-hero {max-height:600px;overflow: hidden;margin-top:-75px;}
+.podcast-hero {max-height:600px;margin-top:-50px;}
 .social-row{min-height:60px;padding:30px 0;}
 .blog-content {display:block; position:relative; padding-top:30px;}
+.pod-details {font-size:10px;font-weight:900;}
 
 .sticky-wrapper{position:relative;z-index:3500;}
 
@@ -959,6 +964,7 @@ and (orientation : portrait) {
 
 @media (min-width: 992px) {
     #purpose-bottom {margin-left: -15px;margin-right: -15px;color: #000;padding-bottom:20px;height:700px;}
+    .page-template-blog-post-template #purpose-bottom{margin-left: -15px;margin-right: -15px;color: #000;padding-bottom:20px;height:700px;margin-bottom:50px;}
     .bottom-info {margin-left:-15px; margin-right:-15px;margin-top:220px;}
 
     }
