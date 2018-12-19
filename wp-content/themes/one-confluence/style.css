@@ -490,7 +490,7 @@ img.grayscale {
 .aligncenter,
 div.aligncenter {display: block;margin: 5px auto 5px auto;}
 .alignright {float:right;margin: 0 0 20px 20px;}
-.alignleft {float: left;margin: 5px 20px 20px 0;}
+img.alignleft {float: left;margin: 5px 20px 20px 0;}
 .aligncenter {display: block;margin: 5px auto 5px auto;}
 a img.alignright {float: right;margin: 5px 0 20px 20px;}
 a img.alignnone {margin: 5px 20px 20px 0;}
@@ -716,6 +716,11 @@ and (max-device-width : 480px) {
 
 .sticky-wrapper{position:relative;z-index:3500;}
 
+
+p {
+    clear: both;
+}
+
 /* push sticky nav down when admin bar is visible.  only applies to admin that are logged in... */
 .admin-bar .stuck {
     top: 32px;
@@ -740,12 +745,17 @@ body .gform_wrapper .top_label div.ginput_container {
     #header {
         background:transparent;
     }
-
+    .mobile-flex {display:flex;flex-direction: column;}
+    .mobile-stack {float:none;clear:both;}
+    .alignleft {float:none !important;display:block;}
+    .mobileOrder1 {order:1;}
+    .mobileOrder2 {order:2;}
 }
 
 @media only screen
     and (min-device-width: 480px)
     and (max-width: 768px) {
+    .mobileOrder1 {margin-top:100px;}
     .scroll-content{padding:25px 0;}
     .border-left1 {
         background: transparent;
