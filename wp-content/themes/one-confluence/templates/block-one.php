@@ -36,8 +36,8 @@ $fontStyle = one_get_option('font-style');
 
 ?>
 
-<section id="passion" class="row" data-title="<?= $topTitleOne; ?>">
-    <div class="col-sm-5 col-md-4 col-lg-4 col-lg-push-2 text-overlay-left clearfix" style="padding: 80px 0 80px 70px;">
+<section id="passion" class="row mobile-flex" data-title="<?= $topTitleOne; ?>">
+    <div class="col-sm-5 col-md-4 col-lg-4 col-lg-push-2 text-overlay-left clearfix mobileOrder2" style="padding: 80px 0 80px 70px;">
         <div class="featured-content-left purpose copy"><h2 id="triggerPassion"><?//= $topTitleOne; ?></h2>
             <div style="padding-right:10px;font-family:'<?= $customFont2; ?>' !important;font-weight:<?= $weight; ?>;font-size:<?= $size; ?>;color:<?= $color; ?>;line-height:<?= $lineHeight; ?>;font-style:<?= $fontStyle; ?>;">
                 <?= $descriptionOne; ?>
@@ -52,7 +52,7 @@ $fontStyle = one_get_option('font-style');
             </div>
         </div>
     </div>
-    <div class="col-sm-7 col-md-7 col-lg-5 col-lg-push-2">
+    <div class="col-sm-7 col-md-7 col-lg-5 col-lg-push-2 mobileOrder1">
         <img src="<?= $imageOne; ?>" class="img-responsive desaturate2" style="width:75%;padding:30px; margin:0 0 0 60px;">
     </div>
 </section>
