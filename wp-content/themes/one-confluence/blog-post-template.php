@@ -24,7 +24,12 @@ $imageUrl = wp_get_attachment_url( get_post_thumbnail_id() );
 
                     <div class="row" style="padding:0;">
                         <div class="col-xs-12" style="font-weight:400;font-size:1.5em;padding:15px 60px;">
-                            <h1 class="dark-version">From the Blog</h1>
+                            <?php if ( have_posts() ) { while ( have_posts() ) { the_post(); ?>
+                            <h1 class="dark-version"><?php echo get_the_title(); ?></h1>
+                            <?php echo the_content(); ?>
+                            <?php }
+                            }
+                            ?>
                             <!--Add Blog Categories as filters here-->
                         </div>
                     </div>
@@ -84,7 +89,7 @@ $imageUrl = wp_get_attachment_url( get_post_thumbnail_id() );
                             $postDate = get_the_date();
                             $thumb = get_post_thumbnail_id();
                             $img_url = wp_get_attachment_url( $thumb,'medium'); //get img URL
-                            $image = aq_resize( $img_url, 450, 310, true ); //resize & crop img
+                            $image = aq_resize( $img_url, 200, 138, true ); //resize & crop img
                             $excerpt = get_the_excerpt();
                             $excerpt = substr($excerpt, 0, 300);
                             if( strlen($excerpt) >= 250 ){
@@ -96,13 +101,14 @@ $imageUrl = wp_get_attachment_url( get_post_thumbnail_id() );
                             ?>
 
                             <?php echo '<div class="project col-xs-12 all project-item '. implode(' ', $links) .'">';?>
-                            <a href="<?= print get_permalink($post->ID); ?>" class="galleryItem" data-group="<?= implode(', ', $links); ?>" title="<?= $title;?>" data-desc="<?= $descDeets; ?>">
-
+                            <p><a href="<?= print get_permalink($post->ID); ?>" class="galleryItem" data-group="<?= implode(', ', $links); ?>" title="<?= $title;?>" data-desc="<?= $descDeets; ?>">
+                                <img src="<?= $image; ?>" class="img-responsive alignleft mobile-stack">
                                 <h2 class="project-title"><?= $postTitle; ?></h2>
                                 <div clsss="pod-details"><?= $postDate; ?>
                                 </div>
                                 <?php echo $excerpt; ?>
                             </a>
+                            </p>
                             <?php echo '</div>' ?>
 
                         <?php endwhile; ?>
