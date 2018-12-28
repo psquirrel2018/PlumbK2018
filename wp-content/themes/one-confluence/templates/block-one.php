@@ -36,9 +36,19 @@ $fontStyle = one_get_option('font-style');
 
 ?>
 
+<div id="" class="row" data-title="" data-target="">
+    <div class="col-sm-7 col-md-8 col-md-push-1 col-lg-6 col-lg-push-2 clearfix">
+
+    </div>
+    <div class="col-sm-5 col-md-4 col-md-pull-1 col-lg-2 col-lg-push-2">
+
+    </div>
+</div>
+
 <section id="passion" class="row mobile-flex" data-title="<?= $topTitleOne; ?>">
-    <div class="col-sm-5 col-md-4 col-lg-4 col-lg-push-2 text-overlay-left clearfix mobileOrder2" style="padding: 80px 0 80px 70px;">
-        <div class="featured-content-left purpose copy"><h2 id="triggerPassion"><?//= $topTitleOne; ?></h2>
+    <div class="col-lg-2 clearfix"></div>
+    <div class="col-sm-5 col-md-4 col-lg-4 text-overlay-left-one mobileOrder2 clearfix">
+        <div class="featured-content-left purpose copy clearfix"><h2 id="triggerPassion"><?//= $topTitleOne; ?></h2>
             <div style="padding-right:10px;font-family:'<?= $customFont2; ?>' !important;font-weight:<?= $weight; ?>;font-size:<?= $size; ?>;color:<?= $color; ?>;line-height:<?= $lineHeight; ?>;font-style:<?= $fontStyle; ?>;">
                 <?= $descriptionOne; ?>
             </div>
@@ -46,37 +56,15 @@ $fontStyle = one_get_option('font-style');
             <div class="clearfix" style="font-weight:600;float:;padding:10px 0 20px 0;">
                -- <?= $topTitleSubHeadingOne; ?>
             </div>
-            <div class="" style="font-weight:600;font-size:16px;">Get Our Free 7 Step Remodel Process</div>
+            <div class="" style="font-weight:600;font-size:16px;"></div>
             <div class="clearfix" style="width:100%;padding-top:30px;">
-                <a href="#" class="" style="float:right;" data-toggle="modal" data-target="#sevenStepModal"><img src="<?= $sevenStepCta; ?>" class="img-responsive" style="width:250px;"></a>
+                <a href="#" class="" style="float:right;" data-toggle="modal" data-target="#sevenStepModal"><img src="<?= $sevenStepCta; ?>" class="img-responsive desaturate" style="width:250px;"></a>
             </div>
         </div>
     </div>
-    <div class="col-sm-7 col-md-7 col-lg-5 col-lg-push-2 mobileOrder1">
-        <img src="<?= $imageOne; ?>" class="img-responsive desaturate2" style="width:75%;padding:30px; margin:0 0 0 60px;">
+    <div class="col-sm-7 col-md-7 col-lg-5 mobileOrder1 clearfix">
+        <img src="<?= $imageOne; ?>" class="img-responsive desaturate-no" style="max-width:440px;padding:30px;margin-top:30px;">
     </div>
 </section>
-
-<div id="sevenStepModal" class="modal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button  class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title" id="myContactModalLabel"></h4>
-            </div>
-            <div class="container modal-body" style="max-width:800px;padding:30px;">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <?= $sevenStepContent; ?>
-                    </div>
-                </div>
-
-            </div>
-            <div class="modal-footer">
-
-            </div>
-        </div>
-    </div>
-</div>
 
 

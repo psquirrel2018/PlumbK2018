@@ -133,7 +133,7 @@ input, select {vertical-align:middle;}
 .dropline{
     margin: 20px 0 0 0;
     background-repeat: no-repeat;
-    background-image: url('http://confluence-sandbox.xyz/3plus1/wp-content/uploads/2017/02/navbar_grey_sans_logo.png');
+    background-image: url('assets/navbar_grey_sans_logo.png');
     background-size: 99%;
     background-position:right 62.5%;
     height: 68px;
@@ -159,7 +159,7 @@ input, select {vertical-align:middle;}
 
 .header .navbar {min-height: 50px !important; margin-bottom:0;}
 
-.menu {background-image: url('http://confluence-sandbox.xyz/3plus1/wp-content/uploads/2016/10/navbar_grey.png');
+.menu {background-image: url('assets/navbar_grey.png');
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: bottom left;
@@ -322,6 +322,7 @@ ul#one_menu2 { margin: 5px 0 0 50px;}
 .block-wrap{ background-color: rgba(255, 255, 255, 1); height:100%;}
 .block-wrap>div{ width: 100%;height: 100%; }
 .text-overlay-left { background-repeat: no-repeat;background-position: 1% 5%; padding:120px 45px; color:#333333;}
+.text-overlay-left-one { background-repeat: no-repeat;background-position: 1% 5%; padding:80px 45px; color:#333333;}
 .text-overlay { background-repeat: no-repeat; background-position: 1% 5%; padding:120px 45px; color:#fff; background-color:rgba(255,255,255,0.5);}
 .text-overlay-right { background-repeat: no-repeat; background-position: 0 5%; padding:60px 30px; color:#333333;}
 .message{margin-top: 10px;}
@@ -332,7 +333,7 @@ ul#one_menu2 { margin: 5px 0 0 50px;}
 .back-to-top { background-color:#145da1; position: fixed; bottom: 0; right: 0; z-index: 100; display: none; text-decoration: none; color: #ffffff;}
 .back-to-top a {color: #ffffff;}
 .featured-content {
-  /*background-color:rgba(240,240,240,1);*/
+    /*background-color:rgba(240,240,240,1);*/
     padding:10px;
     color: #777;
     font-size:16px;
@@ -592,7 +593,7 @@ img.thumb.img-responsive.grayscale {float: right;}
 }
 
 .letter {
-   padding:0;
+    padding:0;
 }
 
 
@@ -674,7 +675,7 @@ img.desaturate4 {filter: grayscale(100%);}
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
-.message .pb {font-size:20px; line-height:20px;}
+    .message .pb {font-size:20px; line-height:20px;}
     .signature {width:75%;}
     .message h3{ font-size: 3.3vw;line-height: 3.6vw;}
     .menu {background:none;}
@@ -737,11 +738,11 @@ body .gform_wrapper .top_label div.ginput_container {
 }
 
 @media only screen and (max-width:420px) {
-        #titleblock {padding: 0 10px;}
-        .menu {background:none;background-size: 0;background-repeat: no-repeat;background-position: bottom left;}
-        #purpose-bottom {height:800px;background-size: cover; background-position-x: -530px;}
-        .bottom-info {margin-top:80px;}
-        .cta-content {width:50%; margin:0 0 0 45%;}
+    #titleblock {padding: 0 10px;}
+    .menu {background:none;background-size: 0;background-repeat: no-repeat;background-position: bottom left;}
+    #purpose-bottom {height:800px;background-size: cover; background-position-x: -530px;}
+    .bottom-info {margin-top:80px;}
+    .cta-content {width:50%; margin:0 0 0 45%;}
     #header {
         background:transparent;
     }
@@ -753,8 +754,8 @@ body .gform_wrapper .top_label div.ginput_container {
 }
 
 @media only screen
-    and (min-device-width: 480px)
-    and (max-width: 768px) {
+and (min-device-width: 480px)
+and (max-width: 768px) {
     .mobileOrder1 {margin-top:100px;}
     .scroll-content{padding:25px 0;}
     .border-left1 {
@@ -847,11 +848,11 @@ body .gform_wrapper .top_label div.ginput_container {
 }
 
 @media screen and (max-height: 450px) {
-        .overlay a {font-size: 20px}
-        .overlay .closebtn { font-size: 40px; top: 15px; right: 35px; }
-        #header {background:transparent;}
-        .scroll-content{padding:25px 0;}
-    }
+    .overlay a {font-size: 20px}
+    .overlay .closebtn { font-size: 40px; top: 15px; right: 35px; }
+    #header {background:transparent;}
+    .scroll-content{padding:25px 0;}
+}
 
 /* Smartphones (landscape) ----------- */
 @media only screen
@@ -977,7 +978,7 @@ and (orientation : portrait) {
     .page-template-blog-post-template #purpose-bottom{margin-left: -15px;margin-right: -15px;color: #000;padding-bottom:20px;height:700px;margin-bottom:50px;}
     .bottom-info {margin-left:-15px; margin-right:-15px;margin-top:220px;}
 
-    }
+}
 
 @media only screen
 and (min-width : 1024px) {
@@ -1167,4 +1168,7 @@ and (orientation : portrait) {
     vertical-align: middle;
     margin-top: -30px;
 }
+
+
+.podcast-title {font-family: 'Londrina Outline', cursive;text-align: center;padding:30px;font-weight:600;}
 
