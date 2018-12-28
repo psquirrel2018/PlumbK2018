@@ -1062,6 +1062,7 @@ and (min-width : 1200px) {
 
     .wian-header.sketch-bg {
         margin-bottom: -30px;
+        margin-left:1px;
     }
 
     .tween1,.tween2,.tween3,.tween4,.tween5,.tween6,.tween7,.tween8,.tween9,.tween10 {font-size:32px;color:#000000;}
