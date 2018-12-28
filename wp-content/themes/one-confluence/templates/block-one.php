@@ -14,7 +14,7 @@ $topTitleSubHeadingOne = get_post_meta($post->ID, '_one_front_one_bottom', true)
 $sevenStepCta = get_post_meta($post->ID, '_one_front_seven_step_button', true);
 $sevenStepUrl = get_post_meta($post->ID, '_one_front_seven_step_url', true);
  //get_post_meta($post->ID, '_one_front_seven_step_content', true);
-$sevenStepContent = apply_filters( 'the_content', get_post_meta( get_the_id(), '_one_front_seven_step_wysiwyg', true ) );
+
 
 //$urlOne = get_post_meta($post->ID, '_one_front_one_url', true);
 
