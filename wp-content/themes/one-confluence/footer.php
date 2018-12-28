@@ -11,6 +11,8 @@ if (function_exists('one_get_option')) {
     $address_line1 = one_get_option('address_line1');
     $address_line2 = one_get_option('address_line2');
 }
+
+$sevenStepContent = apply_filters( 'the_content', get_post_meta( get_the_id(), '_one_front_seven_step_wysiwyg', true ) );
 ?>
 
 <div id="sevenStepModal" class="modal">
