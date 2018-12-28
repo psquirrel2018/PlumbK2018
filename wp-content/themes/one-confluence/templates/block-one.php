@@ -48,7 +48,7 @@ $fontStyle = one_get_option('font-style');
             </div>
 
             <div class="quote-subheading clearfix">
-               -- <?= $topTitleSubHeadingOne; ?>
+               <?= $topTitleSubHeadingOne; ?>
             </div>
 
             <div class="seven-step-cta clearfix">
