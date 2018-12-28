@@ -13,6 +13,29 @@ if (function_exists('one_get_option')) {
 }
 ?>
 
+<div id="sevenStepModal" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button  class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myContactModalLabel"></h4>
+            </div>
+            <div class="container modal-body" style="max-width:800px;padding:30px;">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <?= $sevenStepContent; ?>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <div id="contactModal" class="modal">
     <div class="modal-dialog">
         <div class="modal-content">
