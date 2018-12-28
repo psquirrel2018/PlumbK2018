@@ -70,6 +70,7 @@ h4 {font-size: 22px;}
 h5 {font-size: 20px;}
 h6 {font-size: 18px;}
 #art {padding:100px 0 0;}
+#passion {padding:60px 0 0;}
 #creative {padding:200px 0 0;}
 #purpose {background-color: #d7d5d5;color: #fff;padding:0 0 10px 0;box-shadow: 0 3px 3px #888888;}
 .purpose {font-size:5.5em;font-weight:800;text-transform: uppercase;text-align: center;line-height:60px;padding-top:20px;color:#333;letter-spacing: 3px;}
@@ -596,7 +597,7 @@ img.blur {filter: blur(1px);}
 img.desaturate2 {filter: grayscale(100%);}
 img.desaturate3 {filter: grayscale(100%);}
 img.desaturate4 {filter: grayscale(100%);}
-img.desaturate-no {max-width:440px;padding:30px 0 30px 80px;margin-top:30px;}
+img.desaturate-no {max-width:500px;padding:10px 0 10px 40px;margin-top:30px;}
 #scroll-container{height:100%;}
 
 .photos_gallery {float: left;margin-bottom: 40px;}
