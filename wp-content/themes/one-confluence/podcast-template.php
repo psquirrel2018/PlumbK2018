@@ -14,59 +14,49 @@ global $post;
 $imageUrl = wp_get_attachment_url( get_post_thumbnail_id() );
 $images = get_field('gallery');
 ?>
-    <div id="main-container" class="container-fluid">
 
+    <div id="main-container" class="container-fluid" style="margin-top:30px;padding:30px;">
+        <?php while ( have_posts() ) : the_post(); ?>
         <div class="fullwidthbanner-container container podcast-hero">
             <div class="row">
-                <div class="col-xs-12 col-md-6 col-md-push-3 hero-container" style="max-width:90%;">
-                    <img class="img-responsive" src="<?= $imageUrl; ?>">
+                <div class="col-xs-12">
+                    <h1 class="podcast-title">
+                        The Builders Journey Podcast
+                    </h1>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-xs-12 col-md-6 col-lg-4">
+                    <img class="img-responsive" src="<?= $imageUrl; ?>" style="max-width:75%;margin:0 auto;border:4px solid #d7d5d5;">
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-8">
+                    <?= the_content(); ?>
+                    <div class="podcast">
+                        <a href="#" class="podcast-cta">
+                            <iframe src="http://www.cbc.ca/i/caffeine/syndicate/?audioId=15632940" width="620" height="138" frameborder="0" allowfullscreen></iframe>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div> <!-- /.rev_slider_wrapper-->
+        <?php endwhile; ?>
 
-        <?php while ( have_posts() ) : the_post(); ?>
 
 
-            <div class="container blog-content">
-                <div class="row">
-                    <?php if (empty($images)) { ?>
-                        <div class="col-xs-12 section-title-wrapper" style="padding:15px;">
-                            <h1 class="light-version"><?= the_title(); ?></h1>
-                            <p><?= the_content(); ?></p>
-                        </div>
-                    <?php }
-                    else { ?>
-                        <div class="col-xs-12 col-sm-8 section-title-wrapper" style="padding:15px;">
-                            <h1 class="light-version"><?= the_title(); ?></h1>
-                            <p><?= the_content(); ?></p>
-                        </div>
-                        <div class="col-xs-12 col-sm-4" style="padding:15px;">
-                            <div class="photos_gallery">
-                                <ul style="margin-bottom:60px;">
-                                    <?php
-                                    $images = get_field('gallery');
-                                    if ($images):
-                                        foreach ($images as $image):
-                                            $url = $image['url'];
-                                            $type = $image['type'];
-                                            //$icon = $image['icon'];
-                                            ?>
-                                            <li class="projectGalleryItem">
-                                                <a class="galleryImage" rel="gallery1" href="<?php echo $url; ?>">
-                                                    <img src="<?php echo $image['sizes']['gallery-thumb']; ?>" alt="<?php echo basename($image['sizes']['medium']); ?>" />
-                                                </a>
-                                            </li>
-                                        <?php
-                                        endforeach;
-                                    endif;
-                                    ?>
-                                </ul>
-                            </div>
-                        </div>
-                    <?php } ?>
+        <div class="container blog-content">
+            <div class="row" style="padding-bottom:30px;">
+                <div class="col-xs-12">
+                    <h2 style="text-align: center; border-bottom:1px solid #d7d5d5;padding-bottom:30px;">
+                        Podcast Support Center
+                    </h2>
                 </div>
             </div>
-        <?php endwhile;
+            <div class="row" style="padding-top:30px;">
+                <div class="col-xs-12"><p>Click <a href="#" style="color:#be1d2d;font-weight:bold;">here</a> to read along and view images for this podcast.</p></div>
+            </div>
+        </div>
+        <?php
         get_template_part('templates/blog-title-block-section');
         get_template_part('templates/footer-block-post');
         ?>

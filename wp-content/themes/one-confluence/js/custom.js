@@ -30,6 +30,12 @@
         }
     );
 
+    $(".desaturate").hover(
+        function () {
+            $(this).removeClass("desaturate");
+        }
+    );
+
 
 
     /* Init Flickity - Homepage slider */
