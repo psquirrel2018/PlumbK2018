@@ -4,12 +4,13 @@
  */
 require_once( dirname(__FILE__) . '/lib/one-site-options.php');
 require_once( dirname(__FILE__) . '/lib/one-frontpage-options.php');
+require_once( dirname(__FILE__) . '/lib/one-podcast-functions.php');
 require_once( dirname(__FILE__) . '/lib/team-functions.php');
 require_once( dirname(__FILE__) . '/lib/gallery-functions.php');
 require_once( dirname(__FILE__) . '/lib/wp_bootstrap_navwalker.php');
 require_once( dirname(__FILE__) . '/lib/slider-functions-repeatablefields.php');
 require_once( dirname(__FILE__) . '/lib/aq_resizer.php');
-//equire_once( dirname(__FILE__) . '/lib/wp-bootstrap-navwalker.php'); // Not using today, but might need in near future.
+//require_once( dirname(__FILE__) . '/lib/wp-bootstrap-navwalker.php'); // Not using today, but might need in near future.
 require_once( dirname(__FILE__) . '/lib/tgm-plugin-activation/class-tgm-plugin-activation.php');
 
 function cws_multitheme_register_required_plugins() {
@@ -127,8 +128,37 @@ function one_confluence_get_wysiwyg_output( $meta_key, $post_id = 2 ) {
     return $content;
 };
 
-
-
+//Creating Custom Post types for the podcasts
+function setup_podcast_cpt(){
+    $labels = array(
+        'name' => _x('podcasts', 'post type general name'),
+        'singular_name' => _x('Podcast', 'post type singular name'),
+        'add_new' => _x('Add New', 'Podcast'),
+        'add_new_item' => __('Add New Podcast'),
+        'edit_item' => __('Edit Podcast'),
+        'new_item' => __('New Podcast'),
+        'all_items' => __('All Podcasts'),
+        'view_item' => __('View Podcast'),
+        'search_items' => __('Search Podcasts'),
+        'not_found' => __('No Podcasts Found'),
+        'not_found_in_trash' => __('No Podcasts found in the trash'),
+        'parent_item_colon' => '',
+        'menu_name' => 'Podcasts'
+    );
+    $args = array(
+        'labels' => $labels,
+        'description' => 'Podcasts',
+        'rewrite' => array('slug' => 'podcasts'),
+        'public' => true,
+        'menu_position' => 5,
+        'supports' => array('title', 'thumbnail', 'editor', 'excerpt', 'custom-fields'),
+        'has_archive' => true,
+        'taxonomies' => array(''),
+        'menu_icon' => 'dashicons-images-alt2',
+    );
+    register_post_type('podcasts', $args);
+}
+add_action('init', 'setup_podcast_cpt');
 
 //Creating Custom Post types for the homepage slider
 function setup_slides_cpt(){
