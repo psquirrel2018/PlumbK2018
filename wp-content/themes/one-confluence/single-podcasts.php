@@ -13,6 +13,8 @@ global $post;
 //hero Variable
 $imageUrl = wp_get_attachment_url( get_post_thumbnail_id() );
 $images = get_field('gallery');
+$podDescription = wpautop( get_post_meta($post->ID, '_one_podcast_description', true));
+
 ?>
     <div id="main-container" class="container-fluid">
 
@@ -33,12 +35,14 @@ $images = get_field('gallery');
                         <div class="col-xs-12 section-title-wrapper" style="padding:15px;">
                             <h1 class="light-version"><?= the_title(); ?></h1>
                             <p><?= the_content(); ?></p>
+                            <p><?= $podDescription; ?></p>
                         </div>
                     <?php }
                     else { ?>
                         <div class="col-xs-12 col-sm-8 section-title-wrapper" style="padding:15px;">
                             <h1 class="light-version"><?= the_title(); ?></h1>
                             <p><?= the_content(); ?></p>
+                            <p><?= $podDescription; ?></p>
                         </div>
                         <div class="col-xs-12 col-sm-4" style="padding:15px;">
                             <div class="photos_gallery">
