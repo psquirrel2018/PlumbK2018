@@ -36,10 +36,9 @@ $imageUrl = wp_get_attachment_url( get_post_thumbnail_id() );
             </div>
         </div> <!-- /.rev_slider_wrapper-->
         <?php endwhile; ?>
-
+        <?php wp_reset_query(); ?>
         <div class="container blog-content">
             <div class="row">
-
                 <?php
                 //use wp_query to get cpts and order by post order attributes
 
@@ -57,16 +56,17 @@ $imageUrl = wp_get_attachment_url( get_post_thumbnail_id() );
                 foreach ($podPosts as $podPost) {
                     $podTitle = get_the_title($podPost);
                     $podUrl = get_permalink($podPost);
-                    $podContent = get_the_content($podPost->ID);
-                    //echo '<pre>' . print_r($workThumbsrc, true) . '</pre>';
+                    $podContent = get_the_content($podPost);
+                    $podExcerpt = get_the_excerpt($podPost->ID);
+                    $podLongDescription = wpautop( get_post_meta($podPost->ID, '_one_podcast_description', true));
+                    $podShortDescription = wpautop( get_post_meta($podPost->ID, '_one_podcast_short_description', true));
 
-                    // echo '<img src="' .$new_image. '">'
-                    //echo $workUrl;
                     ?>
-                    <div class="col-xs-12" style="margin: 0;min-height:220px;">
+                    <div class="col-xs-12" style="margin: 0;">
                         <article class="pod-entry-1">
-                            <h1 style="padding:15px;"><?= $podTitle; ?></h1>
-                            <?= $podPost->post_content; ?>
+                            <h2><a href="<?= $podUrl; ?>"><?= $podTitle; ?></a></h2>
+                            <?//= $podPost->post_content; ?>
+                            <?= $podShortDescription; ?>
                         </article>
                     </div>
                 <?php } // END foreach ?>

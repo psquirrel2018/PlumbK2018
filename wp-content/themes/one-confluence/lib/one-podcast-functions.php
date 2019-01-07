@@ -64,9 +64,16 @@ function one_register_podcast_metabox() {
         // 'repeatable' => true,
     ) );
     $cmb_demo->add_field( array(
-        'name'    => __( 'Podcast Description Content', 'cmb2' ),
+        'name'    => __( 'Podcast Notes Content', 'cmb2' ),
+        'desc'    => __( 'This is where you enter the Podcast Notes provided by Travis.', 'cmb2' ),
+        'id'      => $prefix . 'description',
+        'type'    => 'wysiwyg',
+        'options' => array( 'textarea_rows' => 5, ),
+    ) );
+    $cmb_demo->add_field( array(
+        'name'    => __( 'Podcast Short Description Content', 'cmb2' ),
         'desc'    => __( 'This is where you enter a short description of the podcast.', 'cmb2' ),
-        'id'      => $prefix . 'podcast_description_wysiwyg',
+        'id'      => $prefix . 'short_description',
         'type'    => 'wysiwyg',
         'options' => array( 'textarea_rows' => 2, ),
     ) );
