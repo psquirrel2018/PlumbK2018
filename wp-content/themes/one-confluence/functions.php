@@ -128,6 +128,11 @@ function one_confluence_get_wysiwyg_output( $meta_key, $post_id = 2 ) {
     return $content;
 };
 
+function custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
 //Creating Custom Post types for the podcasts
 function setup_podcast_cpt(){
     $labels = array(

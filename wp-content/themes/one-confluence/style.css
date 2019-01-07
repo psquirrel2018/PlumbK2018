@@ -661,6 +661,16 @@ img.desaturate-no {max-width:500px;padding:10px 0 10px 40px;margin-top:30px;}
 
 #sevenStepModal {z-index: 9999;}
 
+.pod-support-center-link{padding:15px 0;}
+.pod-link{color:#be1e2d;font-weight:bold;}
+
+.mfp-wrap.mfp-gallery.mfp-ready {
+    z-index: 10000;
+}
+
+h2 a {color:#0a6eb0;}
+h2 a:hover {color:#be1e2d;}
+
 .tween1,.tween2,.tween3,.tween4,.tween5,.tween6,.tween7,.tween8,.tween9,.tween10 {font-size:32px;color:#000000;}
 #pbTrigger, #etTrigger {font-size:32px;}
 /*====================Start Media Queries==================*/
