@@ -31,52 +31,51 @@ $whatsInaNameParagraphFour = get_post_meta($post->ID, '_one_front_name_paragraph
                             </div>
                         </div>
                         <div id="paragraph1" class="row">
-                            <div class="col-xs-1"></div>
-                            <div class="col-xs-10 border-left border-left1">
+                            <div class="hidden-xs col-sm-1"></div>
+                            <div class="col-sm-10 border-left border-left1">
                                 <div id="border1" class="spacer s0"></div>
                                 <div class="paragraph1 scroll-content tween1">
                                     <?= $whatsInaNameParagraphOne; ?>
                                 </div>
                             </div>
-                            <div class="col-xs-1"></div>
+                            <div class="hidden-xs col-sm-1"></div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-1">
+                            <div class="hidden-xs col-sm-1">
                             </div>
-                            <div class="col-xs-10 border-left border-left2">
+                            <div class="col-sm-10 border-left border-left2">
                                 <div id="border2" class="spacer s0"></div>
                                 <div class="paragraph2 scroll-content tween2">
                                     <?= $whatsInaNameParagraphTwo; ?>
                                 </div>
                             </div>
-                            <div class="col-xs-1"></div>
+                            <div class="hidden-xs col-sm-1"></div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-1"></div>
-                            <div class="col-xs-10 border-left border-left3">
+                            <div class="hidden-xs col-sm-1"></div>
+                            <div class="col-sm-10 border-left border-left3">
                                 <div id="border3" class="spacer s0"></div>
                                 <div class="paragraph3 scroll-content tween3">
                                     <?= $whatsInaNameParagraphThree; ?>
                                 </div>
                             </div>
-                            <div class="col-xs-1">
+                            <div class="chidden-xs col-sm-1">
                             </div>
                         </div>
                         <?php if ($whatsInaNameParagraphFour !='') { ?>
                             <div class="row">
-                                <div class="col-xs-1"></div>
-                                <div class="col-xs-10 border-left border-left4">
+                                <div class="hidden-xs col-sm-1"></div>
+                                <div class="col-sm-10 border-left border-left4">
                                     <div id="border4" class="spacer s0"></div>
                                     <div class="paragraph4 scroll-content tween4">
                                         <?= $whatsInaNameParagraphFour; ?>
                                     </div>
                                 </div>
-                                <div class="col-xs-1">
+                                <div class="hidden-xs col-sm-1">
                                 </div>
                             </div>
                         <?php } ?>
                         <div id="sketch" class="row">
-                            <div class="col-md-1"></div>
                             <div class="col-md-12 pb-bg2 sketch-container">
                                 <div class="pb-container">
                                     <img class="pb-bottom img-responsive" src="<?= $whatsInaNamePlumbBob; ?>"><!-- Plumb bob image-->
@@ -84,7 +83,7 @@ $whatsInaNameParagraphFour = get_post_meta($post->ID, '_one_front_name_paragraph
                             </div>
                         </div>
                         <div id="contact-signature" class="row">
-                            <div class="col-md-1"></div>
+                            <div class="hidden-xs hidden-sm col-md-1"></div>
                             <div class="col-md-11 col-md-pull-1 pb-bg2">
                                 <div id="signature" class="wian-signature">
                                     <div id="contact" class="contact-us-button">

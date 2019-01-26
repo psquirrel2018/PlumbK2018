@@ -34,7 +34,7 @@
 
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar" data-offset="50" <?php body_class(); ?> >
-    <section id="purpose" data-title="Purpose" style="background-color: <?= $header_bg_color; ?>">
+    <section id="purpose" data-title="REMODELING" style="background-color: <?= $header_bg_color; ?>">
         <div class="container purpose">
             <div class="row">
                 <div class="col-xs-6 col-xs-push-3 col-sm-4 col-sm-push-4">

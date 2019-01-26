@@ -21,7 +21,7 @@ $imageUrl = wp_get_attachment_url( get_post_thumbnail_id() );
             <div class="row">
                 <div class="col-xs-12">
                     <h1 class="podcast-title">
-                        The Builders Journey Podcasts
+                        <?= the_title(); ?>
                     </h1>
                 </div>
             </div>

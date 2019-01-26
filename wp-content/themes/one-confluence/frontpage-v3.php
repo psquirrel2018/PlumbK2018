@@ -28,7 +28,7 @@ $galleryLayout = get_post_meta($post->ID, 'gallery_layout', true);
        if ($teamLayout === 'fluid') { get_template_part('templates/team-fluid'); }
        else { get_template_part('templates/owl-slider-one'); }
 
-        get_template_part('templates/block-five');
+       get_template_part('templates/block-five');
        get_template_part('templates/title-block-section');
        get_template_part('templates/whats-in-a-name');
 

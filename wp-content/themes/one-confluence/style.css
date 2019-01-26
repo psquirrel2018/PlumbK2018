@@ -597,7 +597,7 @@ img.blur {filter: blur(1px);}
 img.desaturate2 {filter: grayscale(100%);}
 img.desaturate3 {filter: grayscale(100%);}
 img.desaturate4 {filter: grayscale(100%);}
-img.desaturate-no {max-width:500px;padding:10px 0 10px 40px;margin-top:30px;}
+img.desaturate-no {padding:10px 0 10px 40px;margin-top:30px;}
 #scroll-container{height:100%;}
 
 .photos_gallery {float: left;margin-bottom: 40px;}
@@ -851,11 +851,13 @@ and (max-width: 768px) {
     .owl-next {right:0;}
 }
 
-@media screen and (max-height: 450px) {
+@media only screen and (max-width: 450px) {
     .overlay a {font-size: 20px}
     .overlay .closebtn { font-size: 40px; top: 15px; right: 35px; }
     #header {background:transparent;}
     .scroll-content{padding:25px 0;}
+    .welcome-quote{font-size:20px !important;}
+    #myContainer {padding: 0 10px;}
 }
 
 /* Smartphones (landscape) ----------- */
@@ -1057,11 +1059,7 @@ and (min-width : 1200px) {
     .header-container.container {
         width: 1120px;
     }
-    /*.bottom-info {
-        margin-top: 110px;
-        padding:22px 0;
-        left:0;
-    }*/
+    img.desaturate-no {max-width:500px;}
     .whw-container {
         padding-top: 200px;
     }
@@ -1143,29 +1141,6 @@ and (min-width : 1624px) {
     }
 }
 
-/* iPhone 5 (portrait & landscape)----------- */
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 568px) {
-    /* STYLES GO HERE */
-}
-
-/* iPhone 5 (landscape)----------- */
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 568px)
-and (orientation : landscape) {
-    /* STYLES GO HERE */
-}
-
-/* iPhone 5 (portrait)----------- */
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 568px)
-and (orientation : portrait) {
-    /* STYLES GO HERE */
-}
-
 .next-prev {
     display: inline-block;
     padding: 0 5px;
@@ -1175,5 +1150,7 @@ and (orientation : portrait) {
 }
 
 
-.podcast-title {font-family: 'Londrina Outline', cursive;text-align: center;padding:30px;font-weight:600;}
+.podcast-title {color:#595958;font-family: Montserrat,sans-serif; text-align: center;padding:30px;font-weight:800;
+    letter-spacing: 0 !important;}
+
 
