@@ -26,9 +26,7 @@ $imageUrl = wp_get_attachment_url( get_post_thumbnail_id() );
                 </div>
             </div>
             <div class="row">
-
                 <div class="col-xs-12 col-md-6 col-lg-4">
-                    <img class="img-responsive" src="<?= $imageUrl; ?>" style="max-width:75%;margin:0 auto;border:4px solid #d7d5d5;">
                 </div>
                 <div class="col-xs-12 col-md-6 col-lg-8">
                     <?= the_content(); ?>
@@ -65,7 +63,6 @@ $imageUrl = wp_get_attachment_url( get_post_thumbnail_id() );
                     <div class="col-xs-12" style="margin: 0;">
                         <article class="pod-entry-1">
                             <h2><a href="<?= $podUrl; ?>"><?= $podTitle; ?></a></h2>
-                            <?//= $podPost->post_content; ?>
                             <?= $podShortDescription; ?>
                         </article>
                     </div>
