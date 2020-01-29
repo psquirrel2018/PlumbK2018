@@ -42,7 +42,8 @@ $fontStyle = one_get_option('font-style');
 <section id="passion" class="row mobile-flex" data-title="<?= $topTitleOne; ?>">
     <div class="col-lg-2 clearfix"></div>
     <div class="col-sm-5 col-md-4 col-lg-4 text-overlay-left-one mobileOrder2 clearfix">
-        <div class="featured-content-left purpose copy clearfix"><h2 id="triggerPassion"><?//= $topTitleOne; ?></h2>
+        <div class="featured-content-left purpose copy clearfix">
+            <h2 id="triggerPassion"><?//= $topTitleOne; ?></h2>
             <div class="welcome-quote" style="font-family:'<?= $customFont2; ?>' !important;font-weight:<?= $weight; ?>;font-size:<?= $size; ?>;color:<?= $color; ?>;line-height:<?= $lineHeight; ?>;font-style:<?= $fontStyle; ?>;">
                 <?= $descriptionOne; ?>
             </div>
@@ -52,7 +53,8 @@ $fontStyle = one_get_option('font-style');
             </div>
 
             <div class="seven-step-cta clearfix">
-                <a href="#" class="" style="float:right;" data-toggle="modal" data-target="#sevenStepModal"><img src="<?= $sevenStepCta; ?>" class="img-responsive desaturate"></a>
+
+                <a href="<?php echo Get_most_recent_permalink(); ?>" class="" style="float:right;"><img src="<?= $sevenStepCta; ?>" class="img-responsive desaturate"></a>
             </div>
         </div>
     </div>
