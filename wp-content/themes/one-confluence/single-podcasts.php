@@ -21,7 +21,7 @@ $podDescription = wpautop( get_post_meta($post->ID, '_one_podcast_description', 
         <div class="fullwidthbanner-container container blog-hero">
             <div class="row">
                 <div class="col-xs-12 hero-container" style="">
-                    <img class="img-responsive" src="<?= $imageUrl; ?>" style="width:100%;min-height: 100px;">
+
                 </div>
             </div>
         </div> <!-- /.rev_slider_wrapper-->

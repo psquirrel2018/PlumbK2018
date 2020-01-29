@@ -27,6 +27,7 @@ $imageUrl = wp_get_attachment_url( get_post_thumbnail_id() );
             </div>
             <div class="row">
                 <div class="col-xs-12 col-md-6 col-lg-4">
+                    <img src="<?= $imageUrl; ?>" class="img-responsive">
                 </div>
                 <div class="col-xs-12 col-md-6 col-lg-8">
                     <?= the_content(); ?>
