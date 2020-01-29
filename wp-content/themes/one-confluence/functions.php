@@ -103,6 +103,22 @@ function oneConfluence_scripts() {
 
 add_action('wp_enqueue_scripts', 'oneConfluence_scripts');
 
+function Get_most_recent_permalink(){
+    global $post;
+    $tmp_post = $post;
+    $args = array(
+        'numberposts'     => 1,
+        'offset'          => 0,
+        'orderby'         => 'post_date',
+        'order'           => 'DESC',
+        'post_type'       => 'podcasts',
+        'post_status'     => 'publish' );
+    $myposts = get_posts( $args );
+    $permalink = get_permalink($myposts[0]->ID);
+    $post = $tmp_post;
+    return $permalink;
+}
+
 //FUNCTION TO GET GOOGLE FONTS
     function setup_google_fonts(){
         $customFontData = one_get_option('typography');
